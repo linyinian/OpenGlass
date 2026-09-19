@@ -357,7 +357,12 @@ namespace OpenGlass::dwmcore
 	struct CRegionShape : CShape
 	{
 		static inline PVOID* vftable{nullptr};
-		static inline PVOID dtor{nullptr};
+
+		inline void dtor()
+		{
+			OPENGLASS_MUSTTAIL
+			return Projection::Invoke<&CRegionShape::dtor>(this);
+		}
 
 		inline HRESULT BuildFromRects(const D2D1_RECT_L* buffer, UINT count)
 		{
@@ -393,8 +398,7 @@ namespace OpenGlass::dwmcore
 		}
 		~CRegionShapeImpl()
 		{
-			std::invoke(Util::force_cast_to<void (CRegionShape::*)()>(CRegionShape::dtor),
-						reinterpret_cast<CRegionShape*>(this));
+			reinterpret_cast<CRegionShape*>(this)->dtor();
 		}
 		CRegionShape* As()
 		{

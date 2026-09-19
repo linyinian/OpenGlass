@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "module": "dwmcore.dll",
-  "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+  "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
   "recognized_builds": [
     17763,
     18362,
@@ -23,7 +23,7 @@
       "time_date_stamp": 2744294780,
       "size_of_image": 3543040,
       "file_size": 3504640,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | BASE"
       ]
@@ -38,7 +38,7 @@
       "time_date_stamp": 587816255,
       "size_of_image": 3543040,
       "file_size": 3504640,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4469342",
         "1809 | KB4471332",
@@ -58,7 +58,7 @@
       "time_date_stamp": 574666969,
       "size_of_image": 3543040,
       "file_size": 3504128,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4482887",
         "1809 | KB4489899",
@@ -87,7 +87,7 @@
       "time_date_stamp": 1798348404,
       "size_of_image": 3526656,
       "file_size": 3490816,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4512534",
         "1809 | KB4512578",
@@ -113,7 +113,7 @@
       "time_date_stamp": 2619582066,
       "size_of_image": 3526656,
       "file_size": 3490304,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4537818",
         "1809 | KB4538461"
@@ -129,7 +129,7 @@
       "time_date_stamp": 3616621034,
       "size_of_image": 3526656,
       "file_size": 3493376,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4541331",
         "1809 | KB4549949",
@@ -153,7 +153,7 @@
       "time_date_stamp": 2098618339,
       "size_of_image": 3526656,
       "file_size": 3491328,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4570333",
         "1809 | KB4571748",
@@ -179,7 +179,7 @@
       "time_date_stamp": 708362770,
       "size_of_image": 3526656,
       "file_size": 3493376,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB4601383",
         "1809 | KB5000822",
@@ -198,7 +198,7 @@
       "time_date_stamp": 2290784548,
       "size_of_image": 3526656,
       "file_size": 3489792,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5001342",
         "1809 | KB5001384",
@@ -217,7 +217,7 @@
       "time_date_stamp": 1295982355,
       "size_of_image": 3522560,
       "file_size": 3488768,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5003703",
         "1809 | KB5004244",
@@ -238,7 +238,7 @@
       "time_date_stamp": 4094290247,
       "size_of_image": 3522560,
       "file_size": 3487744,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5005568",
         "1809 | KB5005625",
@@ -261,7 +261,7 @@
       "time_date_stamp": 2464738100,
       "size_of_image": 3522560,
       "file_size": 3486720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5009557",
         "1809 | KB5009616",
@@ -278,7 +278,7 @@
       "time_date_stamp": 259917934,
       "size_of_image": 3522560,
       "file_size": 3486720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5010351",
         "1809 | KB5010427"
@@ -294,7 +294,7 @@
       "time_date_stamp": 3812982772,
       "size_of_image": 3522560,
       "file_size": 3487232,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5011503",
         "1809 | KB5011551"
@@ -310,7 +310,7 @@
       "time_date_stamp": 1849557989,
       "size_of_image": 3522560,
       "file_size": 3487232,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5012636",
         "1809 | KB5012647",
@@ -327,7 +327,7 @@
       "time_date_stamp": 1082370243,
       "size_of_image": 3522560,
       "file_size": 3487232,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5015018"
       ]
@@ -342,7 +342,7 @@
       "time_date_stamp": 2637244219,
       "size_of_image": 3522560,
       "file_size": 3484672,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5014022",
         "1809 | KB5014669",
@@ -365,7 +365,7 @@
       "time_date_stamp": 4251587244,
       "size_of_image": 3522560,
       "file_size": 3484672,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5018419",
         "1809 | KB5020438"
@@ -381,7 +381,7 @@
       "time_date_stamp": 3483700079,
       "size_of_image": 3522560,
       "file_size": 3484672,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5019966",
         "1809 | KB5021237",
@@ -405,7 +405,7 @@
       "time_date_stamp": 4082906448,
       "size_of_image": 3522560,
       "file_size": 3484672,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5028168",
         "1809 | KB5029247",
@@ -423,7 +423,7 @@
       "time_date_stamp": 1115705962,
       "size_of_image": 3522560,
       "file_size": 3485184,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5032196",
         "1809 | KB5033371",
@@ -443,7 +443,7 @@
       "time_date_stamp": 1994272655,
       "size_of_image": 3526656,
       "file_size": 3490816,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5036896"
       ]
@@ -458,7 +458,7 @@
       "time_date_stamp": 875923269,
       "size_of_image": 3543040,
       "file_size": 3507200,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5037765"
       ]
@@ -473,7 +473,7 @@
       "time_date_stamp": 875923269,
       "size_of_image": 3543040,
       "file_size": 3507200,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5039705"
       ]
@@ -488,7 +488,7 @@
       "time_date_stamp": 2686814557,
       "size_of_image": 3543040,
       "file_size": 3505152,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5039217"
       ]
@@ -503,7 +503,7 @@
       "time_date_stamp": 3320075649,
       "size_of_image": 3534848,
       "file_size": 3498496,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5040430",
         "1809 | KB5041578",
@@ -521,7 +521,7 @@
       "time_date_stamp": 3443516109,
       "size_of_image": 3538944,
       "file_size": 3499008,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5046615",
         "1809 | KB5048661",
@@ -538,7 +538,7 @@
       "time_date_stamp": 2940808140,
       "size_of_image": 3534848,
       "file_size": 3498496,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5052000",
         "1809 | KB5053596"
@@ -554,7 +554,7 @@
       "time_date_stamp": 2702488389,
       "size_of_image": 3534848,
       "file_size": 3498496,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5055519",
         "1809 | KB5058922",
@@ -571,7 +571,7 @@
       "time_date_stamp": 2351580012,
       "size_of_image": 3538944,
       "file_size": 3499520,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5058392"
       ]
@@ -586,7 +586,7 @@
       "time_date_stamp": 2351580012,
       "size_of_image": 3538944,
       "file_size": 3499520,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5061978"
       ]
@@ -601,7 +601,7 @@
       "time_date_stamp": 3446263571,
       "size_of_image": 3538944,
       "file_size": 3499520,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5060531"
       ]
@@ -616,7 +616,7 @@
       "time_date_stamp": 1253869813,
       "size_of_image": 3538944,
       "file_size": 3499520,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5062557"
       ]
@@ -631,7 +631,7 @@
       "time_date_stamp": 3664329235,
       "size_of_image": 3534848,
       "file_size": 3498496,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5063877",
         "1809 | KB5066187"
@@ -647,7 +647,7 @@
       "time_date_stamp": 4078343911,
       "size_of_image": 3538944,
       "file_size": 3499520,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5065428"
       ]
@@ -662,7 +662,7 @@
       "time_date_stamp": 3745977957,
       "size_of_image": 3538944,
       "file_size": 3500544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5066586",
         "1809 | KB5068791",
@@ -680,7 +680,7 @@
       "time_date_stamp": 1342155120,
       "size_of_image": 3538944,
       "file_size": 3500544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5073723",
         "1809 | KB5077795",
@@ -697,7 +697,7 @@
       "time_date_stamp": 2121773324,
       "size_of_image": 3538944,
       "file_size": 3500032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5075904"
       ]
@@ -712,7 +712,7 @@
       "time_date_stamp": 3370096549,
       "size_of_image": 3538944,
       "file_size": 3500032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5078752"
       ]
@@ -727,7 +727,7 @@
       "time_date_stamp": 2449233467,
       "size_of_image": 3538944,
       "file_size": 3500032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5082123",
         "1809 | KB5091573"
@@ -743,7 +743,7 @@
       "time_date_stamp": 899210955,
       "size_of_image": 3538944,
       "file_size": 3500544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5087538"
       ]
@@ -758,7 +758,7 @@
       "time_date_stamp": 304391919,
       "size_of_image": 3538944,
       "file_size": 3501056,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5094123"
       ]
@@ -773,7 +773,7 @@
       "time_date_stamp": 1125585797,
       "size_of_image": 3538944,
       "file_size": 3501568,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5099538"
       ]
@@ -788,9 +788,25 @@
       "time_date_stamp": 2632488966,
       "size_of_image": 3538944,
       "file_size": 3501568,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1809 | KB5120238"
+      ]
+    },
+    {
+      "module": "dwmcore.dll",
+      "version": {
+        "build": 17763,
+        "revision": 9245
+      },
+      "sha256": "08b2b0995d8231feadd43f4c9f2ffa38d6fab9aa27c79e3e34e77cdcdfef1974",
+      "time_date_stamp": 3505669751,
+      "size_of_image": 3538944,
+      "file_size": 3501568,
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
+      "provenance": [
+        "1809 | KB5122876",
+        "1809 | KB5129238"
       ]
     },
     {
@@ -803,7 +819,7 @@
       "time_date_stamp": 3116925870,
       "size_of_image": 3588096,
       "file_size": 3552256,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | BASE"
       ]
@@ -818,7 +834,7 @@
       "time_date_stamp": 2032098331,
       "size_of_image": 3584000,
       "file_size": 3550720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4497935",
         "1903 | KB4503293"
@@ -834,7 +850,7 @@
       "time_date_stamp": 2184964510,
       "size_of_image": 3584000,
       "file_size": 3550720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4501375",
         "1903 | KB4507453"
@@ -850,7 +866,7 @@
       "time_date_stamp": 560897695,
       "size_of_image": 3584000,
       "file_size": 3550720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4505903"
       ]
@@ -865,7 +881,7 @@
       "time_date_stamp": 560897695,
       "size_of_image": 3584000,
       "file_size": 3550720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4512508"
       ]
@@ -880,7 +896,7 @@
       "time_date_stamp": 1075228198,
       "size_of_image": 3584000,
       "file_size": 3551232,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4512941",
         "1903 | KB4515384",
@@ -897,7 +913,7 @@
       "time_date_stamp": 1762042824,
       "size_of_image": 3584000,
       "file_size": 3553280,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4517211",
         "1903 | KB4517389",
@@ -919,7 +935,7 @@
       "time_date_stamp": 823029233,
       "size_of_image": 3579904,
       "file_size": 3550208,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4532693",
         "1903 | KB4532695"
@@ -935,7 +951,7 @@
       "time_date_stamp": 756518404,
       "size_of_image": 3588096,
       "file_size": 3552768,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4535996",
         "1903 | KB4540673",
@@ -952,7 +968,7 @@
       "time_date_stamp": 396245820,
       "size_of_image": 3579904,
       "file_size": 3547648,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4541335",
         "1903 | KB4549951",
@@ -976,7 +992,7 @@
       "time_date_stamp": 3384150383,
       "size_of_image": 3579904,
       "file_size": 3547136,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4566116",
         "1903 | KB4574727"
@@ -992,7 +1008,7 @@
       "time_date_stamp": 3799271597,
       "size_of_image": 3579904,
       "file_size": 3545088,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1903 | KB4577062",
         "1903 | KB4577671",
@@ -1017,7 +1033,7 @@
       "time_date_stamp": 2265026555,
       "size_of_image": 3579904,
       "file_size": 3546112,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB4601380",
         "1909 | KB5000808",
@@ -1036,7 +1052,7 @@
       "time_date_stamp": 3564574261,
       "size_of_image": 3579904,
       "file_size": 3543552,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5001337",
         "1909 | KB5001396",
@@ -1053,7 +1069,7 @@
       "time_date_stamp": 3858475268,
       "size_of_image": 3575808,
       "file_size": 3543040,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5003212"
       ]
@@ -1068,7 +1084,7 @@
       "time_date_stamp": 3883190801,
       "size_of_image": 3575808,
       "file_size": 3543040,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5003635"
       ]
@@ -1083,7 +1099,7 @@
       "time_date_stamp": 3856399305,
       "size_of_image": 3575808,
       "file_size": 3540480,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5003698",
         "1909 | KB5004245",
@@ -1100,7 +1116,7 @@
       "time_date_stamp": 1596013892,
       "size_of_image": 3579904,
       "file_size": 3544576,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5004293",
         "1909 | KB5005031",
@@ -1117,7 +1133,7 @@
       "time_date_stamp": 648412738,
       "size_of_image": 3579904,
       "file_size": 3543040,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5005566"
       ]
@@ -1132,7 +1148,7 @@
       "time_date_stamp": 628716399,
       "size_of_image": 3579904,
       "file_size": 3545600,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5005624"
       ]
@@ -1147,7 +1163,7 @@
       "time_date_stamp": 900371902,
       "size_of_image": 3579904,
       "file_size": 3545600,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5006667",
         "1909 | KB5007189",
@@ -1164,7 +1180,7 @@
       "time_date_stamp": 2672075557,
       "size_of_image": 3575808,
       "file_size": 3542528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5009545",
         "1909 | KB5010792"
@@ -1180,7 +1196,7 @@
       "time_date_stamp": 3772604250,
       "size_of_image": 3575808,
       "file_size": 3542528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5010345"
       ]
@@ -1195,7 +1211,7 @@
       "time_date_stamp": 2591274435,
       "size_of_image": 3567616,
       "file_size": 3536896,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5011485"
       ]
@@ -1210,7 +1226,7 @@
       "time_date_stamp": 3241390626,
       "size_of_image": 3567616,
       "file_size": 3536896,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "1909 | KB5012591",
         "1909 | KB5013945"
@@ -1226,7 +1242,7 @@
       "time_date_stamp": 701712269,
       "size_of_image": 3620864,
       "file_size": 3585024,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | BASE"
       ]
@@ -1241,7 +1257,7 @@
       "time_date_stamp": 694926011,
       "size_of_image": 3624960,
       "file_size": 3588096,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4566782",
         "2004 | KB4568831"
@@ -1257,7 +1273,7 @@
       "time_date_stamp": 1589075666,
       "size_of_image": 3620864,
       "file_size": 3587584,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4571744",
         "2004 | KB4571756",
@@ -1274,7 +1290,7 @@
       "time_date_stamp": 4024726140,
       "size_of_image": 3620864,
       "file_size": 3587072,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4577063",
         "2004 | KB4579311",
@@ -1293,7 +1309,7 @@
       "time_date_stamp": 769870385,
       "size_of_image": 3620864,
       "file_size": 3586048,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4586853",
         "2004 | KB4592438"
@@ -1309,7 +1325,7 @@
       "time_date_stamp": 2370157866,
       "size_of_image": 3620864,
       "file_size": 3586560,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4598242"
       ]
@@ -1324,7 +1340,7 @@
       "time_date_stamp": 3817500027,
       "size_of_image": 3624960,
       "file_size": 3591168,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4598291",
         "2004 | KB4601319"
@@ -1340,7 +1356,7 @@
       "time_date_stamp": 1897462204,
       "size_of_image": 3629056,
       "file_size": 3592192,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB4601382",
         "2004 | KB5000802",
@@ -1358,7 +1374,7 @@
       "time_date_stamp": 2268439070,
       "size_of_image": 3633152,
       "file_size": 3597824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5000842"
       ]
@@ -1373,7 +1389,7 @@
       "time_date_stamp": 448320866,
       "size_of_image": 3633152,
       "file_size": 3597312,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5001330",
         "21H1 | BASE"
@@ -1389,7 +1405,7 @@
       "time_date_stamp": 2277323568,
       "size_of_image": 3633152,
       "file_size": 3597824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5001391",
         "2004 | KB5003173"
@@ -1405,7 +1421,7 @@
       "time_date_stamp": 2467999163,
       "size_of_image": 3633152,
       "file_size": 3596800,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5003214"
       ]
@@ -1420,7 +1436,7 @@
       "time_date_stamp": 4110872732,
       "size_of_image": 3633152,
       "file_size": 3596800,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5003637",
         "2004 | KB5004476"
@@ -1436,7 +1452,7 @@
       "time_date_stamp": 1969457967,
       "size_of_image": 3629056,
       "file_size": 3591680,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5003690",
         "2004 | KB5004237",
@@ -1454,7 +1470,7 @@
       "time_date_stamp": 2567676514,
       "size_of_image": 3629056,
       "file_size": 3591680,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5004296",
         "2004 | KB5005033"
@@ -1470,7 +1486,7 @@
       "time_date_stamp": 3353786110,
       "size_of_image": 3624960,
       "file_size": 3590656,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5005101"
       ]
@@ -1485,7 +1501,7 @@
       "time_date_stamp": 4049827902,
       "size_of_image": 3624960,
       "file_size": 3589120,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5005565"
       ]
@@ -1500,7 +1516,7 @@
       "time_date_stamp": 806169044,
       "size_of_image": 3620864,
       "file_size": 3584000,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5005611"
       ]
@@ -1515,7 +1531,7 @@
       "time_date_stamp": 552361616,
       "size_of_image": 3620864,
       "file_size": 3584000,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5006670",
         "21H2 | BASE"
@@ -1531,7 +1547,7 @@
       "time_date_stamp": 3262640343,
       "size_of_image": 3616768,
       "file_size": 3580928,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5006738",
         "2004 | KB5007186"
@@ -1547,7 +1563,7 @@
       "time_date_stamp": 905096521,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "2004 | KB5007253",
         "2004 | KB5008212"
@@ -1563,7 +1579,7 @@
       "time_date_stamp": 3119928968,
       "size_of_image": 3616768,
       "file_size": 3579392,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5009543",
         "20H2 | KB5010793"
@@ -1579,7 +1595,7 @@
       "time_date_stamp": 2770274633,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5009596"
       ]
@@ -1594,7 +1610,7 @@
       "time_date_stamp": 2166510937,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5010342",
         "20H2 | KB5010415"
@@ -1610,7 +1626,7 @@
       "time_date_stamp": 2785526524,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5011487"
       ]
@@ -1625,7 +1641,7 @@
       "time_date_stamp": 1930685143,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5011543"
       ]
@@ -1640,7 +1656,7 @@
       "time_date_stamp": 316535540,
       "size_of_image": 3616768,
       "file_size": 3580416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5012599"
       ]
@@ -1655,7 +1671,7 @@
       "time_date_stamp": 380758396,
       "size_of_image": 3612672,
       "file_size": 3574784,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5011831",
         "20H2 | KB5013942",
@@ -1674,7 +1690,7 @@
       "time_date_stamp": 1355351639,
       "size_of_image": 3612672,
       "file_size": 3575296,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5014666",
         "20H2 | KB5015807",
@@ -1692,7 +1708,7 @@
       "time_date_stamp": 2416445689,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5016688",
         "20H2 | KB5017308",
@@ -1710,7 +1726,7 @@
       "time_date_stamp": 1077560978,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5018410",
         "20H2 | KB5018482",
@@ -1728,7 +1744,7 @@
       "time_date_stamp": 405376103,
       "size_of_image": 3612672,
       "file_size": 3576832,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5019959"
       ]
@@ -1743,7 +1759,7 @@
       "time_date_stamp": 447738597,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5019275",
         "20H2 | KB5020030",
@@ -1762,7 +1778,7 @@
       "time_date_stamp": 316949131,
       "size_of_image": 3612672,
       "file_size": 3575296,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5022906",
         "20H2 | KB5023696",
@@ -1780,7 +1796,7 @@
       "time_date_stamp": 2479412196,
       "size_of_image": 3612672,
       "file_size": 3577344,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "20H2 | KB5026361",
         "21H2 | KB5027215",
@@ -1798,7 +1814,7 @@
       "time_date_stamp": 2916581003,
       "size_of_image": 3612672,
       "file_size": 3577344,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5028166",
         "21H2 | KB5029244",
@@ -1816,7 +1832,7 @@
       "time_date_stamp": 3877047296,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5030211",
         "22H2 | KB5029331",
@@ -1833,7 +1849,7 @@
       "time_date_stamp": 1307705829,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5031356"
       ]
@@ -1848,7 +1864,7 @@
       "time_date_stamp": 901265297,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "22H2 | KB5031445"
       ]
@@ -1863,7 +1879,7 @@
       "time_date_stamp": 3547492951,
       "size_of_image": 3612672,
       "file_size": 3576320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5032189",
         "21H2 | KB5033372",
@@ -1886,7 +1902,7 @@
       "time_date_stamp": 3760898315,
       "size_of_image": 3616768,
       "file_size": 3578368,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5036892"
       ]
@@ -1901,7 +1917,7 @@
       "time_date_stamp": 1970742647,
       "size_of_image": 3616768,
       "file_size": 3578368,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "22H2 | KB5036979"
       ]
@@ -1916,7 +1932,7 @@
       "time_date_stamp": 192079066,
       "size_of_image": 3633152,
       "file_size": 3596288,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5037768",
         "21H2 | KB5039211",
@@ -1933,7 +1949,7 @@
       "time_date_stamp": 2868583531,
       "size_of_image": 3629056,
       "file_size": 3593216,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5040427",
         "22H2 | KB5039299"
@@ -1949,7 +1965,7 @@
       "time_date_stamp": 3928445770,
       "size_of_image": 3624960,
       "file_size": 3585024,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "22H2 | KB5040525"
       ]
@@ -1964,7 +1980,7 @@
       "time_date_stamp": 771302265,
       "size_of_image": 3624960,
       "file_size": 3586560,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5041580",
         "21H2 | KB5043064",
@@ -1984,7 +2000,7 @@
       "time_date_stamp": 317395886,
       "size_of_image": 3624960,
       "file_size": 3587584,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5046613"
       ]
@@ -1999,7 +2015,7 @@
       "time_date_stamp": 1677390471,
       "size_of_image": 3624960,
       "file_size": 3585536,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5048652",
         "21H2 | KB5049981",
@@ -2018,7 +2034,7 @@
       "time_date_stamp": 2740451975,
       "size_of_image": 3624960,
       "file_size": 3585024,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5053606",
         "22H2 | KB5052077",
@@ -2035,7 +2051,7 @@
       "time_date_stamp": 2917590207,
       "size_of_image": 3624960,
       "file_size": 3585024,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5055518"
       ]
@@ -2050,7 +2066,7 @@
       "time_date_stamp": 955269310,
       "size_of_image": 3624960,
       "file_size": 3585024,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "22H2 | KB5055612"
       ]
@@ -2065,7 +2081,7 @@
       "time_date_stamp": 2252325100,
       "size_of_image": 3624960,
       "file_size": 3586048,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5058379"
       ]
@@ -2080,7 +2096,7 @@
       "time_date_stamp": 2252325100,
       "size_of_image": 3624960,
       "file_size": 3586048,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5060533",
         "21H2 | KB5061768",
@@ -2101,7 +2117,7 @@
       "time_date_stamp": 1719257566,
       "size_of_image": 3624960,
       "file_size": 3586048,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5063709",
         "21H2 | KB5066188",
@@ -2119,7 +2135,7 @@
       "time_date_stamp": 1021687797,
       "size_of_image": 3624960,
       "file_size": 3587072,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5065429",
         "22H2 | KB5066198"
@@ -2135,7 +2151,7 @@
       "time_date_stamp": 119417812,
       "size_of_image": 3629056,
       "file_size": 3589632,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5066791",
         "21H2 | KB5068781",
@@ -2153,7 +2169,7 @@
       "time_date_stamp": 1922058801,
       "size_of_image": 3629056,
       "file_size": 3589632,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5073724",
         "21H2 | KB5077796",
@@ -2170,7 +2186,7 @@
       "time_date_stamp": 1602601106,
       "size_of_image": 3624960,
       "file_size": 3587584,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5075912"
       ]
@@ -2185,7 +2201,7 @@
       "time_date_stamp": 776401262,
       "size_of_image": 3624960,
       "file_size": 3588096,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5078885"
       ]
@@ -2200,7 +2216,7 @@
       "time_date_stamp": 1664675036,
       "size_of_image": 3624960,
       "file_size": 3589120,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5082200"
       ]
@@ -2215,7 +2231,7 @@
       "time_date_stamp": 1246693660,
       "size_of_image": 3629056,
       "file_size": 3590656,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5087544"
       ]
@@ -2230,7 +2246,7 @@
       "time_date_stamp": 1967120647,
       "size_of_image": 3629056,
       "file_size": 3590656,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5094127"
       ]
@@ -2245,7 +2261,7 @@
       "time_date_stamp": 411759261,
       "size_of_image": 3629056,
       "file_size": 3592704,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5099539"
       ]
@@ -2260,9 +2276,25 @@
       "time_date_stamp": 1870213636,
       "size_of_image": 3629056,
       "file_size": 3593216,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "21H2 | KB5120249"
+      ]
+    },
+    {
+      "module": "dwmcore.dll",
+      "version": {
+        "build": 19041,
+        "revision": 7725
+      },
+      "sha256": "b7488eb96e3ad2a845fdf0cd03d2d729e970eca81e08c087ce7a6deea8d2cd9d",
+      "time_date_stamp": 4053850564,
+      "size_of_image": 3629056,
+      "file_size": 3591168,
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
+      "provenance": [
+        "21H2 | KB5122878",
+        "21H2 | KB5129236"
       ]
     },
     {
@@ -2275,7 +2307,7 @@
       "time_date_stamp": 2238069931,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | BASE"
       ]
@@ -2290,7 +2322,7 @@
       "time_date_stamp": 2546943143,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5006674"
       ]
@@ -2305,7 +2337,7 @@
       "time_date_stamp": 1826556256,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5006746",
         "11-21H2 | KB5007215",
@@ -2323,7 +2355,7 @@
       "time_date_stamp": 1675479395,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5008353",
         "11-21H2 | KB5009566",
@@ -2340,7 +2372,7 @@
       "time_date_stamp": 1027978865,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5010386"
       ]
@@ -2355,7 +2387,7 @@
       "time_date_stamp": 550883199,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5010414"
       ]
@@ -2370,7 +2402,7 @@
       "time_date_stamp": 4095609656,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5011493",
         "11-21H2 | KB5011563"
@@ -2386,7 +2418,7 @@
       "time_date_stamp": 1525621129,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5012592"
       ]
@@ -2401,7 +2433,7 @@
       "time_date_stamp": 2455493594,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5012643"
       ]
@@ -2416,7 +2448,7 @@
       "time_date_stamp": 2455493594,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5013943"
       ]
@@ -2431,7 +2463,7 @@
       "time_date_stamp": 2450271403,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5014019",
         "11-21H2 | KB5014697"
@@ -2447,7 +2479,7 @@
       "time_date_stamp": 2595607136,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5014668",
         "11-21H2 | KB5015814"
@@ -2463,7 +2495,7 @@
       "time_date_stamp": 1063091925,
       "size_of_image": 4198400,
       "file_size": 4177920,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5015882",
         "11-21H2 | KB5016629"
@@ -2479,7 +2511,7 @@
       "time_date_stamp": 500870560,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5016691",
         "11-21H2 | KB5017328"
@@ -2495,7 +2527,7 @@
       "time_date_stamp": 1190750779,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5017383"
       ]
@@ -2510,7 +2542,7 @@
       "time_date_stamp": 288377682,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5018418",
         "11-21H2 | KB5018483",
@@ -2527,7 +2559,7 @@
       "time_date_stamp": 439699660,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5019961"
       ]
@@ -2542,7 +2574,7 @@
       "time_date_stamp": 1880991653,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5019157",
         "11-21H2 | KB5019274",
@@ -2561,7 +2593,7 @@
       "time_date_stamp": 462826964,
       "size_of_image": 4198400,
       "file_size": 4177920,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5022905",
         "11-21H2 | KB5023698"
@@ -2577,7 +2609,7 @@
       "time_date_stamp": 158644931,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5023774",
         "11-21H2 | KB5025224"
@@ -2593,7 +2625,7 @@
       "time_date_stamp": 4093918506,
       "size_of_image": 4198400,
       "file_size": 4177920,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5025298",
         "11-21H2 | KB5026368",
@@ -2611,7 +2643,7 @@
       "time_date_stamp": 820771727,
       "size_of_image": 4198400,
       "file_size": 4177920,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5027292",
         "11-21H2 | KB5028182",
@@ -2629,7 +2661,7 @@
       "time_date_stamp": 4027111601,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5029332",
         "11-21H2 | KB5030217",
@@ -2646,7 +2678,7 @@
       "time_date_stamp": 572184655,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5031358"
       ]
@@ -2661,7 +2693,7 @@
       "time_date_stamp": 1726146974,
       "size_of_image": 4194304,
       "file_size": 4173824,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5032192",
         "11-21H2 | KB5033369",
@@ -2680,7 +2712,7 @@
       "time_date_stamp": 3977242571,
       "size_of_image": 4206592,
       "file_size": 4186112,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5036894"
       ]
@@ -2695,7 +2727,7 @@
       "time_date_stamp": 3233089292,
       "size_of_image": 4218880,
       "file_size": 4198400,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5037770"
       ]
@@ -2710,7 +2742,7 @@
       "time_date_stamp": 2409086991,
       "size_of_image": 4214784,
       "file_size": 4194304,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5039213"
       ]
@@ -2725,7 +2757,7 @@
       "time_date_stamp": 1511185130,
       "size_of_image": 4206592,
       "file_size": 4186112,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5040431"
       ]
@@ -2740,7 +2772,7 @@
       "time_date_stamp": 3105375368,
       "size_of_image": 4210688,
       "file_size": 4190208,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-21H2 | KB5041592",
         "11-21H2 | KB5043067",
@@ -2757,7 +2789,7 @@
       "time_date_stamp": 1982273889,
       "size_of_image": 4272128,
       "file_size": 4251648,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | BASE"
       ]
@@ -2772,7 +2804,7 @@
       "time_date_stamp": 3175555301,
       "size_of_image": 4276224,
       "file_size": 4255744,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5019311"
       ]
@@ -2787,7 +2819,7 @@
       "time_date_stamp": 1494362353,
       "size_of_image": 4276224,
       "file_size": 4255744,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5017389"
       ]
@@ -2802,7 +2834,7 @@
       "time_date_stamp": 2026040954,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5018427"
       ]
@@ -2817,7 +2849,7 @@
       "time_date_stamp": 2518614140,
       "size_of_image": 4276224,
       "file_size": 4255744,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5019509"
       ]
@@ -2832,7 +2864,7 @@
       "time_date_stamp": 1118926117,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5018496"
       ]
@@ -2847,7 +2879,7 @@
       "time_date_stamp": 3022982383,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5019980"
       ]
@@ -2862,7 +2894,7 @@
       "time_date_stamp": 3021588338,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5020044",
         "11-22H2 | KB5021255",
@@ -2881,7 +2913,7 @@
       "time_date_stamp": 3523257690,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5022913",
         "11-22H2 | KB5023706",
@@ -2899,7 +2931,7 @@
       "time_date_stamp": 3004291388,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5025305",
         "11-22H2 | KB5026372",
@@ -2917,7 +2949,7 @@
       "time_date_stamp": 643136805,
       "size_of_image": 4259840,
       "file_size": 4239360,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5027303",
         "11-22H2 | KB5028185",
@@ -2935,7 +2967,7 @@
       "time_date_stamp": 1775406036,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5029351",
         "11-22H2 | KB5030219",
@@ -2954,7 +2986,7 @@
       "time_date_stamp": 750851539,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5031455"
       ]
@@ -2969,7 +3001,7 @@
       "time_date_stamp": 3378132416,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5032190",
         "11-22H2 | KB5032288",
@@ -2987,7 +3019,7 @@
       "time_date_stamp": 3510526319,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5034204",
         "11-22H2 | KB5034765"
@@ -3003,7 +3035,7 @@
       "time_date_stamp": 3422598518,
       "size_of_image": 4255744,
       "file_size": 4235264,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5034848",
         "11-22H2 | KB5035853",
@@ -3020,7 +3052,7 @@
       "time_date_stamp": 352450640,
       "size_of_image": 4259840,
       "file_size": 4239360,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5036893"
       ]
@@ -3035,7 +3067,7 @@
       "time_date_stamp": 2977101757,
       "size_of_image": 4259840,
       "file_size": 4239360,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5036980"
       ]
@@ -3050,7 +3082,7 @@
       "time_date_stamp": 3958026812,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5037771"
       ]
@@ -3065,7 +3097,7 @@
       "time_date_stamp": 4171404302,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5037853",
         "11-22H2 | KB5039212"
@@ -3081,7 +3113,7 @@
       "time_date_stamp": 1574925690,
       "size_of_image": 4272128,
       "file_size": 4251648,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5039302",
         "11-22H2 | KB5040442"
@@ -3097,7 +3129,7 @@
       "time_date_stamp": 41885947,
       "size_of_image": 4288512,
       "file_size": 4268032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5040527"
       ]
@@ -3112,7 +3144,7 @@
       "time_date_stamp": 2756697651,
       "size_of_image": 4288512,
       "file_size": 4268032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5041585"
       ]
@@ -3127,7 +3159,7 @@
       "time_date_stamp": 1149314266,
       "size_of_image": 4288512,
       "file_size": 4268032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5041587",
         "11-22H2 | KB5043076"
@@ -3143,7 +3175,7 @@
       "time_date_stamp": 906830122,
       "size_of_image": 4288512,
       "file_size": 4268032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5043145",
         "11-22H2 | KB5044285"
@@ -3159,7 +3191,7 @@
       "time_date_stamp": 1217109761,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5044380"
       ]
@@ -3174,7 +3206,7 @@
       "time_date_stamp": 1531412478,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5046633"
       ]
@@ -3189,7 +3221,7 @@
       "time_date_stamp": 988503816,
       "size_of_image": 4292608,
       "file_size": 4272128,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5046732",
         "11-22H2 | KB5048685",
@@ -3206,7 +3238,7 @@
       "time_date_stamp": 1113952003,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5050092",
         "11-22H2 | KB5051989"
@@ -3222,7 +3254,7 @@
       "time_date_stamp": 1308861439,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5052094",
         "11-22H2 | KB5053602"
@@ -3238,7 +3270,7 @@
       "time_date_stamp": 1806386258,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5053657"
       ]
@@ -3253,7 +3285,7 @@
       "time_date_stamp": 2592284409,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5055528",
         "11-22H2 | KB5058919"
@@ -3269,7 +3301,7 @@
       "time_date_stamp": 1144230656,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5055629"
       ]
@@ -3284,7 +3316,7 @@
       "time_date_stamp": 368338148,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5058405"
       ]
@@ -3299,7 +3331,7 @@
       "time_date_stamp": 2632862370,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5058502"
       ]
@@ -3314,7 +3346,7 @@
       "time_date_stamp": 1454604074,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5060826",
         "11-22H2 | KB5060999",
@@ -3332,7 +3364,7 @@
       "time_date_stamp": 3020888701,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5062663",
         "11-22H2 | KB5063875",
@@ -3349,7 +3381,7 @@
       "time_date_stamp": 3916155631,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5064080"
       ]
@@ -3364,7 +3396,7 @@
       "time_date_stamp": 1475237116,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5065431",
         "11-23H2 | KB5065790"
@@ -3380,7 +3412,7 @@
       "time_date_stamp": 1628125876,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-22H2 | KB5066793",
         "11-23H2 | KB5067112",
@@ -3397,7 +3429,7 @@
       "time_date_stamp": 2058663942,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5070312",
         "11-23H2 | KB5071417"
@@ -3413,7 +3445,7 @@
       "time_date_stamp": 1139122398,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5073455",
         "11-23H2 | KB5077797",
@@ -3430,7 +3462,7 @@
       "time_date_stamp": 241504039,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5075941"
       ]
@@ -3445,7 +3477,7 @@
       "time_date_stamp": 1133378257,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5078883"
       ]
@@ -3460,7 +3492,7 @@
       "time_date_stamp": 2645973060,
       "size_of_image": 4304896,
       "file_size": 4284416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5082052"
       ]
@@ -3475,7 +3507,7 @@
       "time_date_stamp": 637185351,
       "size_of_image": 4304896,
       "file_size": 4284416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5087420"
       ]
@@ -3490,7 +3522,7 @@
       "time_date_stamp": 4027046781,
       "size_of_image": 4304896,
       "file_size": 4284416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5093998"
       ]
@@ -3505,7 +3537,7 @@
       "time_date_stamp": 3933572361,
       "size_of_image": 4308992,
       "file_size": 4288512,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5099414"
       ]
@@ -3520,9 +3552,25 @@
       "time_date_stamp": 140050221,
       "size_of_image": 4308992,
       "file_size": 4288512,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-23H2 | KB5120240"
+      ]
+    },
+    {
+      "module": "dwmcore.dll",
+      "version": {
+        "build": 22621,
+        "revision": 7582
+      },
+      "sha256": "c39f13115450caacbc6f6a274f2637b82972a5d1e48081b0b60a62a2c78994ac",
+      "time_date_stamp": 4051846830,
+      "size_of_image": 4304896,
+      "file_size": 4284416,
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
+      "provenance": [
+        "11-23H2 | KB5122880",
+        "11-23H2 | KB5129242"
       ]
     },
     {
@@ -3535,7 +3583,7 @@
       "time_date_stamp": 2350972387,
       "size_of_image": 4300800,
       "file_size": 4280320,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | BASE"
       ]
@@ -3550,7 +3598,7 @@
       "time_date_stamp": 1515099844,
       "size_of_image": 4304896,
       "file_size": 4284416,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5039239"
       ]
@@ -3565,7 +3613,7 @@
       "time_date_stamp": 3491265253,
       "size_of_image": 4317184,
       "file_size": 4296704,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5039304"
       ]
@@ -3580,7 +3628,7 @@
       "time_date_stamp": 3393892117,
       "size_of_image": 4317184,
       "file_size": 4296704,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5040435"
       ]
@@ -3595,7 +3643,7 @@
       "time_date_stamp": 2429396196,
       "size_of_image": 4325376,
       "file_size": 4304896,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5040529"
       ]
@@ -3610,7 +3658,7 @@
       "time_date_stamp": 1275297141,
       "size_of_image": 4329472,
       "file_size": 4308992,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5041571"
       ]
@@ -3625,7 +3673,7 @@
       "time_date_stamp": 893345292,
       "size_of_image": 4476928,
       "file_size": 4456448,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5041865",
         "11-24H2 | KB5043080"
@@ -3641,7 +3689,7 @@
       "time_date_stamp": 2172281048,
       "size_of_image": 4481024,
       "file_size": 4460544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5043178"
       ]
@@ -3656,7 +3704,7 @@
       "time_date_stamp": 3344419145,
       "size_of_image": 4481024,
       "file_size": 4460544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5044284"
       ]
@@ -3671,7 +3719,7 @@
       "time_date_stamp": 46047772,
       "size_of_image": 4489216,
       "file_size": 4468736,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5044384"
       ]
@@ -3686,7 +3734,7 @@
       "time_date_stamp": 761189606,
       "size_of_image": 4493312,
       "file_size": 4472832,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5046617"
       ]
@@ -3701,7 +3749,7 @@
       "time_date_stamp": 3106252813,
       "size_of_image": 4472832,
       "file_size": 4452352,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5046740"
       ]
@@ -3716,7 +3764,7 @@
       "time_date_stamp": 31684655,
       "size_of_image": 4472832,
       "file_size": 4452352,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5048667",
         "11-24H2 | KB5050009"
@@ -3732,7 +3780,7 @@
       "time_date_stamp": 3959296411,
       "size_of_image": 4485120,
       "file_size": 4460544,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5050094",
         "11-24H2 | KB5051987"
@@ -3748,7 +3796,7 @@
       "time_date_stamp": 2569935075,
       "size_of_image": 4460544,
       "file_size": 4440064,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5052093",
         "11-24H2 | KB5053598"
@@ -3764,7 +3812,7 @@
       "time_date_stamp": 2150748299,
       "size_of_image": 4460544,
       "file_size": 4440064,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5053656"
       ]
@@ -3779,7 +3827,7 @@
       "time_date_stamp": 1997735758,
       "size_of_image": 4460544,
       "file_size": 4440064,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5055523"
       ]
@@ -3794,7 +3842,7 @@
       "time_date_stamp": 2857748656,
       "size_of_image": 4534272,
       "file_size": 4513792,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5055627"
       ]
@@ -3809,7 +3857,7 @@
       "time_date_stamp": 583529155,
       "size_of_image": 4534272,
       "file_size": 4513792,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5058411",
         "11-24H2 | KB5061977"
@@ -3825,7 +3873,7 @@
       "time_date_stamp": 3501282555,
       "size_of_image": 4513792,
       "file_size": 4493312,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5058499",
         "11-24H2 | KB5060842",
@@ -3842,7 +3890,7 @@
       "time_date_stamp": 1993622153,
       "size_of_image": 4513792,
       "file_size": 4489216,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5060829",
         "11-24H2 | KB5062553",
@@ -3859,7 +3907,7 @@
       "time_date_stamp": 829363851,
       "size_of_image": 4485120,
       "file_size": 4464640,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5062660"
       ]
@@ -3874,7 +3922,7 @@
       "time_date_stamp": 515069109,
       "size_of_image": 4485120,
       "file_size": 4464640,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5063878"
       ]
@@ -3889,7 +3937,7 @@
       "time_date_stamp": 2933296284,
       "size_of_image": 4431872,
       "file_size": 4411392,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5064081",
         "11-24H2 | KB5065426",
@@ -3907,7 +3955,7 @@
       "time_date_stamp": 2370394183,
       "size_of_image": 4427776,
       "file_size": 4407296,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5065789"
       ]
@@ -3922,7 +3970,7 @@
       "time_date_stamp": 1680194596,
       "size_of_image": 4427776,
       "file_size": 4407296,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5066835",
         "11-24H2 | KB5070773"
@@ -3938,7 +3986,7 @@
       "time_date_stamp": 134811220,
       "size_of_image": 4431872,
       "file_size": 4411392,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5067036",
         "11-24H2 | KB5068861"
@@ -3954,7 +4002,7 @@
       "time_date_stamp": 670323858,
       "size_of_image": 4395008,
       "file_size": 4374528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5070311",
         "11-24H2 | KB5072033"
@@ -3970,7 +4018,7 @@
       "time_date_stamp": 1180077628,
       "size_of_image": 4395008,
       "file_size": 4374528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5074109",
         "11-24H2 | KB5077744",
@@ -3987,7 +4035,7 @@
       "time_date_stamp": 3965937398,
       "size_of_image": 4403200,
       "file_size": 4382720,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5074105"
       ]
@@ -4002,7 +4050,7 @@
       "time_date_stamp": 3997891956,
       "size_of_image": 4399104,
       "file_size": 4378624,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5077181"
       ]
@@ -4017,7 +4065,7 @@
       "time_date_stamp": 3508310862,
       "size_of_image": 4382720,
       "file_size": 4362240,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5077241",
         "11-24H2 | KB5079473",
@@ -4034,7 +4082,7 @@
       "time_date_stamp": 3839337809,
       "size_of_image": 4390912,
       "file_size": 4370432,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5079391",
         "11-24H2 | KB5086672"
@@ -4050,7 +4098,7 @@
       "time_date_stamp": 839248919,
       "size_of_image": 4395008,
       "file_size": 4374528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5083769"
       ]
@@ -4065,7 +4113,7 @@
       "time_date_stamp": 2312722669,
       "size_of_image": 4390912,
       "file_size": 4370432,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5083631"
       ]
@@ -4080,7 +4128,7 @@
       "time_date_stamp": 1937450430,
       "size_of_image": 4395008,
       "file_size": 4374528,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5089549"
       ]
@@ -4095,7 +4143,7 @@
       "time_date_stamp": 2187726000,
       "size_of_image": 4382720,
       "file_size": 4362240,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5089573"
       ]
@@ -4110,7 +4158,7 @@
       "time_date_stamp": 1377927121,
       "size_of_image": 4382720,
       "file_size": 4362240,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5094126"
       ]
@@ -4125,7 +4173,7 @@
       "time_date_stamp": 1101800425,
       "size_of_image": 4390912,
       "file_size": 4370432,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5095093"
       ]
@@ -4140,7 +4188,7 @@
       "time_date_stamp": 993464825,
       "size_of_image": 4390912,
       "file_size": 4370432,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5101650",
         "11-24H2 | KB5121767"
@@ -4156,7 +4204,7 @@
       "time_date_stamp": 4183648249,
       "size_of_image": 4386816,
       "file_size": 4362240,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5101684"
       ]
@@ -4171,9 +4219,26 @@
       "time_date_stamp": 267582741,
       "size_of_image": 4386816,
       "file_size": 4362240,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-24H2 | KB5121003"
+      ]
+    },
+    {
+      "module": "dwmcore.dll",
+      "version": {
+        "build": 26100,
+        "revision": 9278
+      },
+      "sha256": "40579ecfa394395677fec84014c32ba5495f334b6d96c5653fd5caa129dc1222",
+      "time_date_stamp": 2585457594,
+      "size_of_image": 4468736,
+      "file_size": 4444160,
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
+      "provenance": [
+        "11-24H2 | KB5120998",
+        "11-24H2 | KB5124008",
+        "11-24H2 | KB5129195"
       ]
     },
     {
@@ -4186,7 +4251,7 @@
       "time_date_stamp": 162189948,
       "size_of_image": 4263936,
       "file_size": 4243456,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5077179"
       ]
@@ -4201,7 +4266,7 @@
       "time_date_stamp": 3495896839,
       "size_of_image": 4263936,
       "file_size": 4243456,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5077239",
         "11-26H1 | KB5079466"
@@ -4217,7 +4282,7 @@
       "time_date_stamp": 2409426939,
       "size_of_image": 4268032,
       "file_size": 4247552,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5079489"
       ]
@@ -4232,7 +4297,7 @@
       "time_date_stamp": 1676483792,
       "size_of_image": 4268032,
       "file_size": 4247552,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5083768"
       ]
@@ -4247,7 +4312,7 @@
       "time_date_stamp": 2339475905,
       "size_of_image": 4284416,
       "file_size": 4263936,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5083806"
       ]
@@ -4262,7 +4327,7 @@
       "time_date_stamp": 48498886,
       "size_of_image": 4284416,
       "file_size": 4263936,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5089548"
       ]
@@ -4277,7 +4342,7 @@
       "time_date_stamp": 1324369432,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5089570"
       ]
@@ -4292,7 +4357,7 @@
       "time_date_stamp": 416268025,
       "size_of_image": 4296704,
       "file_size": 4276224,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5095051"
       ]
@@ -4307,7 +4372,7 @@
       "time_date_stamp": 2297249043,
       "size_of_image": 4288512,
       "file_size": 4268032,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5095091"
       ]
@@ -4322,7 +4387,7 @@
       "time_date_stamp": 2685879973,
       "size_of_image": 4292608,
       "file_size": 4272128,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5101649"
       ]
@@ -4337,7 +4402,7 @@
       "time_date_stamp": 348698581,
       "size_of_image": 4280320,
       "file_size": 4259840,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5101681"
       ]
@@ -4352,9 +4417,26 @@
       "time_date_stamp": 2850404734,
       "size_of_image": 4284416,
       "file_size": 4263936,
-      "source_index_sha256": "47c52e6f4dc9ea26ae03e6351e78055265f42529fb01a8099f9970f58025a105",
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
       "provenance": [
         "11-26H1 | KB5121000"
+      ]
+    },
+    {
+      "module": "dwmcore.dll",
+      "version": {
+        "build": 28000,
+        "revision": 2804
+      },
+      "sha256": "c5397191db8e7fa929e1846cd2cebec51cc2a8ab36d2ab6ecfaf875522112ab1",
+      "time_date_stamp": 1640362259,
+      "size_of_image": 4280320,
+      "file_size": 4259840,
+      "source_index_sha256": "ce7221dccd40742143b97edf0d15c9ec505c8b2a960edf22cb8b9620559fc896",
+      "provenance": [
+        "11-26H1 | KB5120996",
+        "11-26H1 | KB5124012",
+        "11-26H1 | KB5129194"
       ]
     }
   ]

@@ -612,6 +612,16 @@
       "symbol_server_key": "0858FF2D41c000"
     },
     {
+      "module": "dwmcore",
+      "version": {
+        "build": 22621,
+        "revision": 7582
+      },
+      "expected_sha256": "c39f13115450caacbc6f6a274f2637b82972a5d1e48081b0b60a62a2c78994ac",
+      "returned_sha256": "2b94f47dfd32990a4326ba99a5b88a2c578be9890758645660e94709d8e24057",
+      "symbol_server_key": "F18246AE41b000"
+    },
+    {
       "module": "udwm",
       "version": {
         "build": 17763,
@@ -1288,7 +1298,7 @@
         "revision": 7517
       },
       "expected_sha256": "06004ea24b56500b56eb892c19fb851597b9368cd47db0fe211305d8078f3f0e",
-      "returned_sha256": "9f53937ae3bc798212676f6dbcdc23f4981be2d92b0b4cfe8d1162083ce78fd7",
+      "returned_sha256": "0622c16d3d3fa8bece6395bcbc3cdb809ecf5b6efed35571e9374a150fd5e95f",
       "symbol_server_key": "A8FE455316a000"
     }
   ]
