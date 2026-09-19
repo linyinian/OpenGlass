@@ -684,6 +684,12 @@ HRESULT CD3DGlassRealizer::Render(
 	// If the caller can't provide an SRV for the back buffer, create an intermediate SRV-capable texture
 	// and copy only the needed blur region into it. We keep coordinates identical (copy into same offset)
 	// so UVs remain unchanged.
+	//
+	// Required on Windows 11 24H2 and later: Windows.Graphics.Capture targets expose no shader resource
+	// view (dwmcore!CDeviceTextureTarget::GetShaderResourceView returns null unless the target is a
+	// display target or an intermediate target), so this is the only usable path there.
+	//
+	// https://github.com/ALTaleX531/OpenGlass/issues/257#issuecomment-3856945555
 	ID3D11ShaderResourceView* pass1InputSRV = backBufferSRV;
 	if (!pass1InputSRV)
 	{
@@ -701,6 +707,16 @@ HRESULT CD3DGlassRealizer::Render(
 
 		// Avoid resource binding hazards (and we will set RTVs explicitly afterwards anyway).
 		context->OMSetRenderTargets(0, nullptr, nullptr);
+
+		// Pass 1 samples this copy directly, so the copy must contain every tap of every fragment
+		// the pass renders. The vertices are already expanded by `expansion`, and the kernel reaches
+		// a further `radius` on the right and `radius + 1` on the left: CalculateDwmHwSamples pairs
+		// the input samples (hwOffset = (i0 - radius) + w1 / (w0 + w1)) and the shader applies a
+		// -0.5 bias, so the leftmost tap lands one texel further out than the rightmost. Pass 1 is
+		// horizontal only (`offsets` are added to u alone), so y keeps the vertex-only expansion.
+		const float copyLeftMargin = expansion + static_cast<float>(m_dwmHwSamples.radius + 1);
+		const float copyRightMargin = expansion + static_cast<float>(m_dwmHwSamples.radius);
+
 		if (rectangles.size() <= 12)
 		{
 			for (auto subRectangle : rectangles)
@@ -709,9 +725,9 @@ HRESULT CD3DGlassRealizer::Render(
 				{
 					subRectangle =
 					{
-						std::max(subRectangle.left - expansion, 0.f),
+						std::max(subRectangle.left - copyLeftMargin, 0.f),
 						std::max(subRectangle.top - expansion, 0.f),
-						std::min(subRectangle.right + expansion, static_cast<float>(backBufferDesc.Width)),
+						std::min(subRectangle.right + copyRightMargin, static_cast<float>(backBufferDesc.Width)),
 						std::min(subRectangle.bottom + expansion, static_cast<float>(backBufferDesc.Height))
 					};
 
@@ -729,7 +745,16 @@ HRESULT CD3DGlassRealizer::Render(
 		}
 		else
 		{
-			const auto copyRegionRect = RectF::ToRectU(samplingWorldBounds);
+			// The single bounding region needs the same extra horizontal reach. samplingWorldBounds is
+			// not clamped here (the scissor clamps it later), so clamp it before copying.
+			const auto copyRegionRect = RectF::ToRectU(
+				D2D1::RectF(
+					std::max(samplingWorldBounds.left - static_cast<float>(m_dwmHwSamples.radius + 1), 0.f),
+					std::max(samplingWorldBounds.top, 0.f),
+					std::min(samplingWorldBounds.right + static_cast<float>(m_dwmHwSamples.radius), static_cast<float>(backBufferDesc.Width)),
+					std::min(samplingWorldBounds.bottom, static_cast<float>(backBufferDesc.Height))
+				)
+			);
 			Util::CopyTextureRegion(
 				context,
 				backBuffer,
