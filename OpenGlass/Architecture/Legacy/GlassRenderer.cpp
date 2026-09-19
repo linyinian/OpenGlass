@@ -476,6 +476,10 @@ HRESULT GlassRenderer::MyCDrawingContext_DrawGeometry(
 					g_params.afterglow.a = 1.f;
 
 					g_params.fallback = color;
+					g_params.fallback.r *= g_params.fallback.a;
+					g_params.fallback.g *= g_params.fallback.a;
+					g_params.fallback.b *= g_params.fallback.a;
+
 					g_params.blurBalance = realizedGlassColorizationParameters.blurBalance;
 				}
 

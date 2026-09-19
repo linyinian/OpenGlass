@@ -19,7 +19,7 @@ minfloat4 main(PS_INPUT input) : SV_Target0
 	result = luminance * minfloat3(afterglow.xyz) + result;
 	result = coverage * minfloat3(color.xyz) + result;
 
-	minfloat4 fallbackColor = Premultiply(minfloat4(fallback));
+	minfloat4 fallbackColor = minfloat4(fallback);
 	result += minfloat(1.0f - coverage) * fallbackColor.rgb;
 	return minfloat4(
 		result,
