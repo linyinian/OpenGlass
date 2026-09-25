@@ -12,6 +12,22 @@ IMPLEMENT_APP(OpenGlass::OpenGlassApp)
 
 namespace OpenGlass
 {
+	namespace
+	{
+		// Apply the font to a window and, recursively, to all of its children.
+		// wxWindow::GetFont() bubbles up to the parent, so setting it on the frame
+		// also covers children created later (dialogs with this frame as parent,
+		// controls added at runtime); this pass covers everything built up front.
+		void ApplyFontToWindowTree(wxWindow* window, const wxFont& font)
+		{
+			window->SetFont(font);
+			for (wxWindow* child : window->GetChildren())
+			{
+				ApplyFontToWindowTree(child, font);
+			}
+		}
+	}
+
 	void OpenGlassApp::OnInitCmdLine(wxCmdLineParser& parser)
 	{
 		wxApp::OnInitCmdLine(parser);
@@ -25,20 +41,16 @@ namespace OpenGlass
 
 	bool OpenGlassApp::OnInit()
 	{
-		// Override the default GUI font before any window is created.
-		// The stock font (Segoe UI 9pt) has no CJK optimization and falls back to
-		// SimSun via font linking in a Chinese locale, which renders poorly.
-		// Microsoft YaHei UI provides proper CJK + Latin mixing for the localized UI.
-		if (wxFont guiFont = wxSystemSettings::GetFont(wxSYS_DEFAULT_GUI_FONT); guiFont.IsOk())
+		// The stock GUI font (Segoe UI 9pt) has no CJK optimization and falls back
+		// to SimSun via font linking in a Chinese locale, which renders poorly.
+		// Build a Microsoft YaHei UI font for proper CJK + Latin mixing.
+		wxFont localizedFont = wxSystemSettings::GetFont(wxSYS_DEFAULT_GUI_FONT);
+		if (localizedFont.IsOk())
 		{
-			guiFont.SetFaceName(L"Microsoft YaHei UI");
-			if (guiFont.GetPointSize() >= 9)
+			localizedFont.SetFaceName(L"Microsoft YaHei UI");
+			if (localizedFont.GetPointSize() >= 9)
 			{
-				guiFont.SetPointSize(guiFont.GetPointSize() + 1);
-			}
-			if (guiFont.IsOk())
-			{
-				wxSystemSettings::SetFont(wxSYS_DEFAULT_GUI_FONT, guiFont);
+				localizedFont.SetPointSize(localizedFont.GetPointSize() + 1);
 			}
 		}
 
@@ -71,6 +83,10 @@ namespace OpenGlass
 		{
 			frame->Destroy();
 			return false;
+		}
+		if (localizedFont.IsOk())
+		{
+			ApplyFontToWindowTree(frame, localizedFont);
 		}
 		frame->Show(true);
 		return true;
