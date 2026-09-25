@@ -48,7 +48,7 @@ namespace OpenGlass
 		: wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(900, 750))
 	{
 		m_isAdmin = true;
-		SetTitle(title + L" (Administrator)");
+		SetTitle(title + L"（管理员）");
 		m_baseTitle = GetTitle();
 		m_config = std::make_unique<RegistryConfig>(RegistryConfig::Mode::Canonical, userSid);
 		m_userConfig = std::make_unique<RegistryConfig>(RegistryConfig::Mode::User, userSid);
@@ -87,8 +87,8 @@ namespace OpenGlass
 		GetSizer()->Add(m_notebook, 1, wxEXPAND | wxALL, 5);
 		auto* statusBar = CreateStatusBar();
 		statusBar->SetToolTip(
-			L"Windows colorization is stored for this user (SID: " + m_targetUserSid
-			+ L"). All other OpenGlass GUI settings apply system-wide."
+			L"Windows 颜色配置按此用户（SID: " + m_targetUserSid
+			+ L"）存储。其他所有 OpenGlass GUI 设置均全局生效。"
 		);
 	}
 
@@ -96,12 +96,12 @@ namespace OpenGlass
 	{
 		wxBoxSizer* btnSizer = new wxBoxSizer(wxHORIZONTAL);
 
-		m_btnSave = new wxButton(this, wxID_ANY, L"Save");
-		m_btnRevert = new wxButton(this, wxID_ANY, L"Revert");
+		m_btnSave = new wxButton(this, wxID_ANY, L"保存");
+		m_btnRevert = new wxButton(this, wxID_ANY, L"还原");
 		m_btnSave->Enable(false);
 		m_btnRevert->Enable(false);
-		m_btnSave->SetToolTip(L"Save changes (Ctrl+S)");
-		m_btnRevert->SetToolTip(L"Revert changes (Esc)");
+		m_btnSave->SetToolTip(L"保存更改 (Ctrl+S)");
+		m_btnRevert->SetToolTip(L"还原更改 (Esc)");
 
 		btnSizer->AddStretchSpacer();
 		btnSizer->Add(m_btnSave, 0, wxRIGHT, 5);
@@ -169,7 +169,7 @@ namespace OpenGlass
 		{
 			return;
 		}
-		SetStatusText(L"Colorization user: " + m_targetUserLabel + L"; other settings apply system-wide");
+		SetStatusText(L"颜色配置用户：" + m_targetUserLabel + L"；其他设置为全局生效");
 	}
 
 	void MainFrame::StartSymbolDownload()
@@ -194,8 +194,8 @@ namespace OpenGlass
 		UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 			0,
 			true,
-			L"Connecting to Microsoft Symbol Server...",
-			L"Preparing symbol download."
+			L"正在连接 Microsoft 符号服务器...",
+			L"正在准备符号下载。"
 		});
 
 		m_symbolDownloadThread = std::jthread([this, symbolDirectory = std::move(symbolDirectory)](std::stop_token stopToken)
@@ -256,7 +256,7 @@ namespace OpenGlass
 		const HRESULT result = QueryTransparencyDiagnostics(m_targetUserSid.ToStdWstring(), diagnostics);
 		if (FAILED(result))
 		{
-			const wxString error = wxString::Format(L"Unavailable (HRESULT 0x%08lX)", static_cast<unsigned long>(result));
+			const wxString error = wxString::Format(L"不可用 (HRESULT 0x%08lX)", static_cast<unsigned long>(result));
 			m_lblWindowsTransparencyStatus->SetLabel(error);
 			m_lblOpaqueBlendStatus->SetLabel(error);
 			m_lblPowerModeStatus->SetLabel(error);
@@ -273,57 +273,57 @@ namespace OpenGlass
 			{
 			case DiagnosticRegistrySource::User: return L"HKCU";
 			case DiagnosticRegistrySource::Machine: return L"HKLM";
-			default: return L"default";
+			default: return L"默认";
 			}
 		};
 		auto powerModeName = [](EFFECTIVE_POWER_MODE mode)
 		{
 			switch (mode)
 			{
-			case EffectivePowerModeBatterySaver: return L"Battery saver / high savings";
-			case EffectivePowerModeBetterBattery: return L"Better battery / standard savings";
-			case EffectivePowerModeBalanced: return L"Balanced";
-			case EffectivePowerModeHighPerformance: return L"High performance";
-			case EffectivePowerModeMaxPerformance: return L"Maximum performance";
-			case EffectivePowerModeGameMode: return L"Game mode";
-			case EffectivePowerModeMixedReality: return L"Mixed reality";
-			default: return L"Unknown";
+			case EffectivePowerModeBatterySaver: return L"省电模式 / 高节能";
+			case EffectivePowerModeBetterBattery: return L"更长续航 / 标准节能";
+			case EffectivePowerModeBalanced: return L"均衡";
+			case EffectivePowerModeHighPerformance: return L"高性能";
+			case EffectivePowerModeMaxPerformance: return L"最高性能";
+			case EffectivePowerModeGameMode: return L"游戏模式";
+			case EffectivePowerModeMixedReality: return L"混合现实";
+			default: return L"未知";
 			}
 		};
 
-		m_lblWindowsTransparencyStatus->SetLabel(diagnostics.windowsTransparencyEnabled ? L"On" : L"Off (opaque)");
+		m_lblWindowsTransparencyStatus->SetLabel(diagnostics.windowsTransparencyEnabled ? L"开" : L"关（不透明）");
 		m_lblOpaqueBlendStatus->SetLabel(wxString::Format(
 			L"%lu (%ls, %ls)",
 			static_cast<unsigned long>(diagnostics.colorizationOpaqueBlend),
 			sourceName(diagnostics.colorizationOpaqueBlendSource),
-			diagnostics.colorizationOpaqueBlend ? L"opaque" : L"transparent"
+			diagnostics.colorizationOpaqueBlend ? L"不透明" : L"透明"
 		));
 		m_lblPowerModeStatus->SetLabel(wxString::Format(
 			L"%ls (%ls)",
 			powerModeName(diagnostics.effectivePowerMode),
-			diagnostics.powerSaverActive ? L"saver" : L"normal"
+			diagnostics.powerSaverActive ? L"省电" : L"正常"
 		));
 		m_lblDisableOnBatteryStatus->SetLabel(wxString::Format(
 			L"%ls (%ls)",
-			diagnostics.disableGlassOnBattery ? L"On" : L"Off",
+			diagnostics.disableGlassOnBattery ? L"开" : L"关",
 			sourceName(diagnostics.disableGlassOnBatterySource)
 		));
 
 		const bool isOpaque = diagnostics.colorizationOpaqueBlend
 			|| (diagnostics.powerSaverActive && diagnostics.disableGlassOnBattery)
 			|| !diagnostics.windowsTransparencyEnabled;
-		wxString resultText = L"Transparent";
+		wxString resultText = L"透明";
 		if (diagnostics.colorizationOpaqueBlend)
 		{
-			resultText = L"Opaque: Opaque blend";
+			resultText = L"不透明：不透明混合";
 		}
 		else if (diagnostics.powerSaverActive && diagnostics.disableGlassOnBattery)
 		{
-			resultText = L"Opaque: Power saver";
+			resultText = L"不透明：省电模式";
 		}
 		else if (!diagnostics.windowsTransparencyEnabled)
 		{
-			resultText = L"Opaque: Windows setting";
+			resultText = L"不透明：Windows 设置";
 		}
 		m_bmpEffectiveTransparencyWarning->Show(isOpaque);
 		m_lblEffectiveTransparencyStatus->SetLabel(resultText);
@@ -410,8 +410,8 @@ namespace OpenGlass
 			UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 				100,
 				false,
-				L"Symbols downloaded successfully.",
-				std::format(L"The symbol cache has been updated:\n{}", outcome.symbolDirectory)
+				L"符号下载成功。",
+				std::format(L"符号缓存已更新：\n{}", outcome.symbolDirectory)
 			});
 			UpdateSymbolDownloadResult(wxART_INFORMATION, wxEmptyString, wxEmptyString);
 			break;
@@ -419,8 +419,8 @@ namespace OpenGlass
 			UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 				m_gaugeSymbolDownload ? m_gaugeSymbolDownload->GetValue() : 0,
 				false,
-				L"Symbol download cancelled.",
-				L"No further network requests will be started."
+				L"符号下载已取消。",
+				L"不会再发起新的网络请求。"
 			});
 			UpdateSymbolDownloadResult(wxART_WARNING, wxEmptyString, outcome.details);
 			break;
@@ -429,7 +429,7 @@ namespace OpenGlass
 			UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 				m_gaugeSymbolDownload ? m_gaugeSymbolDownload->GetValue() : 0,
 				false,
-				L"Symbol download failed.",
+				L"符号下载失败。",
 				outcome.summary
 			});
 			UpdateSymbolDownloadResult(wxART_ERROR, wxEmptyString, outcome.details);
@@ -452,7 +452,7 @@ namespace OpenGlass
 		if (FAILED(result))
 		{
 			m_dwmCrashDumpStatusText = wxString::Format(
-				L"Unable to read the dwm.exe WER configuration (HRESULT 0x%08lX).",
+				L"无法读取 dwm.exe 的 WER 配置 (HRESULT 0x%08lX)。",
 				static_cast<unsigned long>(result)
 			);
 			m_btnEnableDwmCrashDumps->Enable(m_isAdmin);
@@ -465,7 +465,7 @@ namespace OpenGlass
 		m_btnDisableDwmCrashDumps->Enable(m_isAdmin && configuration.enabled);
 		if (!configuration.enabled)
 		{
-			m_dwmCrashDumpStatusText = L"Disabled. No per-application WER LocalDumps configuration exists for dwm.exe. System-wide WER settings, if present, may still apply.";
+			m_dwmCrashDumpStatusText = L"已禁用。dwm.exe 不存在按应用的 WER LocalDumps 配置。系统级 WER 设置（如存在）可能仍然生效。";
 			RefreshDiagnosticsLayout();
 			return;
 		}
@@ -476,19 +476,19 @@ namespace OpenGlass
 		}
 
 		const wxString folder = configuration.dumpFolder.empty()
-			? wxString{ L"Windows default" }
+			? wxString{ L"Windows 默认" }
 			: wxString{ configuration.dumpFolder };
 		if (configuration.dumpType == 2 && configuration.dumpCount == 1 && !configuration.dumpFolder.empty())
 		{
 			m_dwmCrashDumpStatusText = wxString::Format(
-				L"Enabled for dwm.exe: full dump, keep 1, folder: %s",
+				L"已为 dwm.exe 启用：完整转储，保留 1 份，文件夹：%s",
 				folder
 			);
 		}
 		else
 		{
 			m_dwmCrashDumpStatusText = wxString::Format(
-				L"Enabled with custom settings for dwm.exe: DumpType=%lu, DumpCount=%lu, folder: %s. Click Enable full dumps to apply the recommended OpenGlass settings.",
+				L"已为 dwm.exe 启用自定义设置：DumpType=%lu，DumpCount=%lu，文件夹：%s。点击「启用完整转储」可应用 OpenGlass 推荐设置。",
 				configuration.dumpType,
 				configuration.dumpCount,
 				folder
@@ -530,11 +530,11 @@ namespace OpenGlass
 			wxMessageBox(
 				wxString::Format(
 					enabled
-						? L"Failed to enable WER crash dumps (HRESULT 0x%08lX)."
-						: L"Failed to disable WER crash dumps (HRESULT 0x%08lX).",
+						? L"启用 WER 崩溃转储失败 (HRESULT 0x%08lX)。"
+						: L"禁用 WER 崩溃转储失败 (HRESULT 0x%08lX)。",
 					static_cast<unsigned long>(result)
 				),
-				L"WER crash dumps",
+				L"WER 崩溃转储",
 				wxOK | wxICON_ERROR,
 				this
 			);
@@ -643,8 +643,8 @@ namespace OpenGlass
 		NotifySettingsChange(ChangeType::Both);
 		LoadSettings(false);
 		wxMessageBox(
-			wxString::Format(L"The registry value '%s' could not be updated (HRESULT 0x%08lX).", name.c_str(), static_cast<unsigned long>(result)),
-			L"OpenGlass configuration",
+			wxString::Format(L"无法更新注册表值 '%s' (HRESULT 0x%08lX)。", name.c_str(), static_cast<unsigned long>(result)),
+			L"OpenGlass 配置",
 			wxOK | wxICON_ERROR,
 			this
 		);
@@ -709,7 +709,7 @@ namespace OpenGlass
 		}
 		if (FAILED(failure))
 		{
-			wxMessageBox(wxString::Format(L"The registry rollback could not be completed (HRESULT 0x%08lX). The configuration remains dirty.", static_cast<unsigned long>(failure)), L"OpenGlass configuration", wxOK | wxICON_ERROR, this);
+			wxMessageBox(wxString::Format(L"无法完成注册表回滚 (HRESULT 0x%08lX)。配置仍处于未保存状态。", static_cast<unsigned long>(failure)), L"OpenGlass 配置", wxOK | wxICON_ERROR, this);
 			return false;
 		}
 		NotifySettingsChange();
@@ -774,7 +774,7 @@ namespace OpenGlass
 		{
 			reset = new wxButton(parent, wxID_ANY, L"↶", wxDefaultPosition, wxSize(28, -1), wxBU_EXACTFIT);
 			reset->SetName(L"Reset Override");
-			reset->SetToolTip(L"Remove the per-user Override value and use the per-user base value or default.");
+			reset->SetToolTip(L"移除按用户的 Override 值，改用按用户基础值或默认值。");
 			reset->Hide();
 			reset->Bind(wxEVT_BUTTON, [this, setting, overrideSetting](wxCommandEvent&)
 			{
@@ -782,7 +782,7 @@ namespace OpenGlass
 			});
 		}
 		info->SetMinSize(iconSize);
-		info->SetToolTip(L"Effective value is coming from an Override key.");
+		info->SetToolTip(L"当前生效值来自 Override 键。");
 		info->Hide();
 
 		row->Add(info, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT | wxLEFT, 2);
@@ -880,8 +880,8 @@ namespace OpenGlass
 					show = isRelevant && resolved.IsOverride();
 					item.overrideIcon->SetToolTip(
 						resolved.source == RegistryValueSource::UserOverride
-							? L"Effective value is coming from the current user's Override value."
-							: L"Effective value is coming from the machine Override value."
+							? L"当前生效值来自当前用户的 Override 值。"
+							: L"当前生效值来自系统级 Override 值。"
 					);
 				}
 				if (item.setting == Settings::Id::ColorizationColorInactive)
@@ -931,7 +931,7 @@ namespace OpenGlass
 		const wxBitmap warnBmp = wxArtProvider::GetBitmap(wxART_WARNING, wxART_MESSAGE_BOX, iconSize);
 		auto* warn = new wxStaticBitmap(parent, wxID_ANY, warnBmp);
 		warn->SetMinSize(iconSize);
-		warn->SetToolTip(title + L" path does not exist. The value will still be saved.");
+		warn->SetToolTip(title + L" 路径不存在。该值仍会被保存。");
 		warn->Hide();
 
 		row->Add(warn, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT | wxLEFT, 2);
@@ -1248,7 +1248,7 @@ namespace OpenGlass
 		m_fpCustomThemeAtlas->Bind(wxEVT_FILEPICKER_CHANGED, [this, updateString, ensureFilePath, restorePickerPath](wxFileDirPickerEvent& e) {
 			if (m_chkCustomThemeAtlas->IsChecked())
 			{
-				if (!ensureFilePath(e.GetPath(), L"Theme atlas"))
+				if (!ensureFilePath(e.GetPath(), L"主题图集"))
 				{
 					restorePickerPath(m_fpCustomThemeAtlas, Settings::Id::CustomThemeAtlas);
 					return;
@@ -1275,7 +1275,7 @@ namespace OpenGlass
 					UpdatePathWarningIcons();
 					return;
 				}
-				if (!ensureFilePath(m_fpCustomThemeAtlas->GetPath(), L"Theme atlas"))
+				if (!ensureFilePath(m_fpCustomThemeAtlas->GetPath(), L"主题图集"))
 				{
 					m_chkCustomThemeAtlas->SetValue(false);
 					m_fpCustomThemeAtlas->Enable(false);
@@ -1289,7 +1289,7 @@ namespace OpenGlass
 		m_fpCustomThemeReflection->Bind(wxEVT_FILEPICKER_CHANGED, [this, updateString, ensureFilePath, restorePickerPath](wxFileDirPickerEvent& e) {
 			if (m_chkCustomThemeReflection->IsChecked())
 			{
-				if (!ensureFilePath(e.GetPath(), L"Reflection texture"))
+				if (!ensureFilePath(e.GetPath(), L"反射纹理"))
 				{
 					restorePickerPath(m_fpCustomThemeReflection, Settings::Id::CustomThemeReflection);
 					return;
@@ -1316,7 +1316,7 @@ namespace OpenGlass
 					UpdatePathWarningIcons();
 					return;
 				}
-				if (!ensureFilePath(m_fpCustomThemeReflection->GetPath(), L"Reflection texture"))
+				if (!ensureFilePath(m_fpCustomThemeReflection->GetPath(), L"反射纹理"))
 				{
 					m_chkCustomThemeReflection->SetValue(false);
 					m_fpCustomThemeReflection->Enable(false);
@@ -1425,7 +1425,7 @@ namespace OpenGlass
 		m_fpCustomThemeMaterial->Bind(wxEVT_FILEPICKER_CHANGED, [this, updateString, ensureFilePath, restorePickerPath](wxFileDirPickerEvent& e) {
 			if (m_chkCustomThemeMaterial->IsChecked())
 			{
-				if (!ensureFilePath(e.GetPath(), L"Material texture"))
+				if (!ensureFilePath(e.GetPath(), L"材质纹理"))
 				{
 					restorePickerPath(m_fpCustomThemeMaterial, Settings::Id::CustomThemeMaterial);
 					return;
@@ -1452,7 +1452,7 @@ namespace OpenGlass
 					UpdatePathWarningIcons();
 					return;
 				}
-				if (!ensureFilePath(m_fpCustomThemeMaterial->GetPath(), L"Material texture"))
+				if (!ensureFilePath(m_fpCustomThemeMaterial->GetPath(), L"材质纹理"))
 				{
 					m_chkCustomThemeMaterial->SetValue(false);
 					m_fpCustomThemeMaterial->Enable(false);
@@ -2035,27 +2035,27 @@ namespace OpenGlass
 		});
 
 		m_btnExportAtlas->Bind(wxEVT_BUTTON, [this](wxCommandEvent&) {
-			wxFileDialog saveDialog(this, L"Save atlas file", L"", L"theme.png", L"PNG files (*.png)|*.png", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
+			wxFileDialog saveDialog(this, L"保存图集文件", L"", L"theme.png", L"PNG 图片 (*.png)|*.png", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
 			if (saveDialog.ShowModal() != wxID_OK) return;
 
 			WCHAR themeFileName[MAX_PATH]{};
 			if (FAILED(GetCurrentThemeName(themeFileName, MAX_PATH, nullptr, 0, nullptr, 0)))
 			{
-				wxMessageBox(L"Failed to get current system theme name.", L"Export Failed", wxICON_ERROR);
+				wxMessageBox(L"获取当前系统主题名称失败。", L"导出失败", wxICON_ERROR);
 				return;
 			}
 
 			wil::unique_hmodule themeResource{ LoadLibraryExW(themeFileName, nullptr, LOAD_LIBRARY_AS_DATAFILE | LOAD_LIBRARY_SEARCH_SYSTEM32) };
 			if (!themeResource)
 			{
-				wxMessageBox(L"Failed to load msstyle.", L"Export Failed", wxICON_ERROR);
+				wxMessageBox(L"加载 msstyle 失败。", L"导出失败", wxICON_ERROR);
 				return;
 			}
 
 			HTHEME hTheme = OpenThemeData(nullptr, L"DWMWindow");
 			if (!hTheme)
 			{
-				wxMessageBox(L"Failed to open DWMWindow theme data.", L"Export Failed", wxICON_ERROR);
+				wxMessageBox(L"打开 DWMWindow 主题数据失败。", L"导出失败", wxICON_ERROR);
 				return;
 			}
 			auto closeTheme = wil::scope_exit([&] { CloseThemeData(hTheme); });
@@ -2065,13 +2065,13 @@ namespace OpenGlass
 
 			if (FAILED(GetThemeStream(hTheme, 0, 0, TMT_DISKSTREAM, &streamAddress, &streamSize, themeResource.get())))
 			{
-				wxMessageBox(L"Failed to retrieve theme stream (Atlas).", L"Export Failed", wxICON_ERROR);
+				wxMessageBox(L"获取主题流（图集）失败。", L"导出失败", wxICON_ERROR);
 				return;
 			}
 
 			if (streamSize == 0 || !streamAddress)
 			{
-				wxMessageBox(L"Retrieved atlas stream is empty.", L"Export Failed", wxICON_ERROR);
+				wxMessageBox(L"获取到的图集流为空。", L"导出失败", wxICON_ERROR);
 				return;
 			}
 
@@ -2079,14 +2079,14 @@ namespace OpenGlass
 				wil::unique_hfile file{ CreateFileW(saveDialog.GetPath().wc_str(), GENERIC_WRITE, 0, nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr) };
 				if (!file)
 				{
-					wxMessageBox(L"Failed to create output file.", L"Export Failed", wxICON_ERROR);
+					wxMessageBox(L"创建输出文件失败。", L"导出失败", wxICON_ERROR);
 					return;
 				}
 
 				DWORD bytesWritten = 0;
 				if (!WriteFile(file.get(), streamAddress, streamSize, &bytesWritten, nullptr) || bytesWritten != streamSize)
 				{
-					wxMessageBox(L"Failed to write all data to file.", L"Export Failed", wxICON_ERROR);
+					wxMessageBox(L"写入文件数据不完整。", L"导出失败", wxICON_ERROR);
 					return;
 				}
 			}
@@ -2140,7 +2140,7 @@ namespace OpenGlass
 				}
 			}
 
-			//wxMessageBox(L"System theme atlas exported successfully!\nA layout file was also generated.", L"Success", wxICON_INFORMATION);
+			//wxMessageBox(L"系统主题图集导出成功！\n同时已生成布局文件。", L"成功", wxICON_INFORMATION);
 		});
 
 		m_btnDownloadSymbols->Bind(wxEVT_BUTTON, [this](wxCommandEvent&) {
@@ -2162,8 +2162,8 @@ namespace OpenGlass
 			UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 				m_gaugeSymbolDownload ? m_gaugeSymbolDownload->GetValue() : 0,
 				true,
-				L"Cancelling symbol download...",
-				L"Waiting for the current network operation to stop."
+				L"正在取消符号下载...",
+				L"正在等待当前网络操作结束。"
 			});
 		});
 
@@ -2202,8 +2202,8 @@ namespace OpenGlass
 			UpdateSymbolDownloadProgress(SymbolDownloadProgress{
 				m_gaugeSymbolDownload ? m_gaugeSymbolDownload->GetValue() : 0,
 				true,
-				L"Cancelling symbol download before closing...",
-				L"The window will close after the current network request finishes or times out."
+				L"关闭前正在取消符号下载...",
+				L"当前网络请求完成或超时后窗口将关闭。"
 			});
 			event.Veto();
 			return;

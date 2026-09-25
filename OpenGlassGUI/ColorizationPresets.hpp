@@ -46,34 +46,34 @@ namespace OpenGlass::ColorizationPresets
 	// Extracted from the stock Vista and Windows 7 themecpl.dll swatch inventories.
 	inline constexpr std::array Vista
 	{
-		Preset{ L"vista.default", L"Default", 0x45409EFE, Family::Vista },
-		Preset{ L"vista.graphite", L"Graphite", 0xA3000000, Family::Vista },
-		Preset{ L"vista.blue", L"Blue", 0xA8004ADE, Family::Vista },
-		Preset{ L"vista.teal", L"Teal", 0x82008CA5, Family::Vista },
-		Preset{ L"vista.red", L"Red", 0x9CCE0C0F, Family::Vista },
-		Preset{ L"vista.orange", L"Orange", 0xA6FF7700, Family::Vista },
-		Preset{ L"vista.pink", L"Pink", 0x49F93EE7, Family::Vista },
-		Preset{ L"vista.frost", L"Frost", 0xCCEFF7F7, Family::Vista }
+		Preset{ L"vista.default", L"默认", 0x45409EFE, Family::Vista },
+		Preset{ L"vista.graphite", L"石墨", 0xA3000000, Family::Vista },
+		Preset{ L"vista.blue", L"蓝", 0xA8004ADE, Family::Vista },
+		Preset{ L"vista.teal", L"青", 0x82008CA5, Family::Vista },
+		Preset{ L"vista.red", L"红", 0x9CCE0C0F, Family::Vista },
+		Preset{ L"vista.orange", L"橙", 0xA6FF7700, Family::Vista },
+		Preset{ L"vista.pink", L"粉", 0x49F93EE7, Family::Vista },
+		Preset{ L"vista.frost", L"霜", 0xCCEFF7F7, Family::Vista }
 	};
 
 	inline constexpr std::array Windows7
 	{
-		Preset{ L"windows7.sky", L"Sky", 0x6B74B8FC, Family::Windows7 },
-		Preset{ L"windows7.twilight", L"Twilight", 0xA80046AD, Family::Windows7 },
-		Preset{ L"windows7.sea", L"Sea", 0x8032CDCD, Family::Windows7 },
-		Preset{ L"windows7.leaf", L"Leaf", 0x6614A600, Family::Windows7 },
-		Preset{ L"windows7.lime", L"Lime", 0x6697D937, Family::Windows7 },
-		Preset{ L"windows7.sun", L"Sun", 0x54FADC0E, Family::Windows7 },
-		Preset{ L"windows7.pumpkin", L"Pumpkin", 0x80FF9C00, Family::Windows7 },
-		Preset{ L"windows7.ruby", L"Ruby", 0xA8CE0F0F, Family::Windows7 },
-		Preset{ L"windows7.fuchsia", L"Fuchsia", 0x66FF0099, Family::Windows7 },
-		Preset{ L"windows7.blush", L"Blush", 0x70FCC7F8, Family::Windows7 },
-		Preset{ L"windows7.violet", L"Violet", 0x856E3BA1, Family::Windows7 },
-		Preset{ L"windows7.lavender", L"Lavender", 0x528D5A94, Family::Windows7 },
-		Preset{ L"windows7.taupe", L"Taupe", 0x6698844C, Family::Windows7 },
-		Preset{ L"windows7.chocolate", L"Chocolate", 0xA84F1B1B, Family::Windows7 },
-		Preset{ L"windows7.slate", L"Slate", 0x80555555, Family::Windows7 },
-		Preset{ L"windows7.frost", L"Frost", 0x54FCFCFC, Family::Windows7 }
+		Preset{ L"windows7.sky", L"天蓝", 0x6B74B8FC, Family::Windows7 },
+		Preset{ L"windows7.twilight", L"暮色", 0xA80046AD, Family::Windows7 },
+		Preset{ L"windows7.sea", L"海", 0x8032CDCD, Family::Windows7 },
+		Preset{ L"windows7.leaf", L"叶", 0x6614A600, Family::Windows7 },
+		Preset{ L"windows7.lime", L"青柠", 0x6697D937, Family::Windows7 },
+		Preset{ L"windows7.sun", L"阳", 0x54FADC0E, Family::Windows7 },
+		Preset{ L"windows7.pumpkin", L"南瓜", 0x80FF9C00, Family::Windows7 },
+		Preset{ L"windows7.ruby", L"宝石红", 0xA8CE0F0F, Family::Windows7 },
+		Preset{ L"windows7.fuchsia", L"紫红", 0x66FF0099, Family::Windows7 },
+		Preset{ L"windows7.blush", L"腮红", 0x70FCC7F8, Family::Windows7 },
+		Preset{ L"windows7.violet", L"紫罗兰", 0x856E3BA1, Family::Windows7 },
+		Preset{ L"windows7.lavender", L"薰衣草", 0x528D5A94, Family::Windows7 },
+		Preset{ L"windows7.taupe", L"灰褐", 0x6698844C, Family::Windows7 },
+		Preset{ L"windows7.chocolate", L"巧克力", 0xA84F1B1B, Family::Windows7 },
+		Preset{ L"windows7.slate", L"岩灰", 0x80555555, Family::Windows7 },
+		Preset{ L"windows7.frost", L"霜", 0x54FCFCFC, Family::Windows7 }
 	};
 
 	[[nodiscard]] constexpr std::span<const Preset> Get(Family family) noexcept

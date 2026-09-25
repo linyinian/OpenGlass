@@ -195,13 +195,13 @@ namespace OpenGlass
 			if (hr == HRESULT_FROM_WIN32(ERROR_TIMEOUT))
 			{
 				return std::format(
-					L"Timed out after {} seconds while downloading {}.",
+					L"等待 {} 秒后下载 {} 超时。",
 					SymbolDownloadTimeoutSeconds,
 					itemName
 				);
 			}
 
-			return std::format(L"Failed to download {} ({}).", itemName, FormatHResult(hr));
+			return std::format(L"下载 {} 失败（{}）。", itemName, FormatHResult(hr));
 		}
 
 		HRESULT BuildModuleDownloadInfo(const std::wstring& modulePath, PCWSTR moduleName, LPCWSTR symbolServerBase, ModuleDownloadInfo& info)
@@ -283,7 +283,7 @@ namespace OpenGlass
 		{
 			outcome.result = SymbolDownloadResult::Failed;
 			outcome.hr = roInitResult;
-			outcome.summary = std::format(L"Failed to initialize the Windows Runtime ({}).", FormatHResult(roInitResult));
+			outcome.summary = std::format(L"初始化 Windows Runtime 失败（{}）。", FormatHResult(roInitResult));
 			return outcome;
 		}
 
@@ -293,7 +293,7 @@ namespace OpenGlass
 		{
 			outcome.result = SymbolDownloadResult::Failed;
 			outcome.hr = HRESULT_FROM_WIN32(directoryError.value());
-			outcome.summary = std::format(L"Failed to create the symbols directory:\n{}", outcome.symbolDirectory);
+			outcome.summary = std::format(L"创建符号目录失败：\n{}", outcome.symbolDirectory);
 			return outcome;
 		}
 
@@ -316,7 +316,7 @@ namespace OpenGlass
 			{
 				outcome.result = SymbolDownloadResult::Cancelled;
 				outcome.hr = HRESULT_FROM_WIN32(ERROR_CANCELLED);
-				outcome.summary = L"Symbol download cancelled.";
+				outcome.summary = L"符号下载已取消。";
 				return outcome;
 			}
 
@@ -325,7 +325,7 @@ namespace OpenGlass
 			{
 				outcome.result = SymbolDownloadResult::Failed;
 				outcome.hr = HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND);
-				outcome.summary = std::format(L"Failed to locate {} in the system directory.", module.name);
+				outcome.summary = std::format(L"在系统目录中找不到 {}。", module.name);
 				return outcome;
 			}
 
@@ -335,8 +335,8 @@ namespace OpenGlass
 			{
 				outcome.result = hr == HRESULT_FROM_WIN32(ERROR_CANCELLED) ? SymbolDownloadResult::Cancelled : SymbolDownloadResult::Failed;
 				outcome.hr = hr;
-				outcome.summary = std::format(L"Failed to prepare symbol download for {} ({}).", module.name, FormatHResult(hr));
-				outcome.details = std::format(L"Module: {}\nPath: {}", module.name, modulePath);
+				outcome.summary = std::format(L"为 {} 准备符号下载失败（{}）。", module.name, FormatHResult(hr));
+				outcome.details = std::format(L"模块：{}\n路径：{}", module.name, modulePath);
 				return outcome;
 			}
 
@@ -345,8 +345,8 @@ namespace OpenGlass
 				MakeProgress(
 					module.basePercent,
 					true,
-					L"Connecting to Microsoft Symbol Server...",
-					std::format(L"Preparing {}", info.pdbFileName)
+					L"正在连接 Microsoft 符号服务器...",
+					std::format(L"正在准备 {}", info.pdbFileName)
 				)
 			);
 
@@ -364,10 +364,10 @@ namespace OpenGlass
 				std::wstring detail = info.pdbFileName;
 				if (progress.downloadedBytes > 0)
 				{
-					detail += std::format(L" - {} bytes", progress.downloadedBytes);
+					detail += std::format(L" - {} 字节", progress.downloadedBytes);
 					if (progress.totalBytes > 0)
 					{
-						detail += std::format(L" / {} bytes", progress.totalBytes);
+						detail += std::format(L" / {} 字节", progress.totalBytes);
 					}
 					if (currentFilePercent >= 0)
 					{
@@ -376,7 +376,7 @@ namespace OpenGlass
 				}
 				else
 				{
-					detail = std::format(L"Requesting {} from Microsoft Symbol Server", info.pdbFileName);
+					detail = std::format(L"正在向 Microsoft 符号服务器请求 {}", info.pdbFileName);
 				}
 
 				ReportProgress(
@@ -384,7 +384,7 @@ namespace OpenGlass
 					MakeProgress(
 						percent,
 						indeterminate,
-						indeterminate ? L"Connecting to Microsoft Symbol Server..." : std::format(L"Downloading {}", info.pdbFileName),
+						indeterminate ? L"正在连接 Microsoft 符号服务器..." : std::format(L"正在下载 {}", info.pdbFileName),
 						detail
 					)
 				);
@@ -396,10 +396,10 @@ namespace OpenGlass
 				outcome.result = hr == HRESULT_FROM_WIN32(ERROR_CANCELLED) ? SymbolDownloadResult::Cancelled : SymbolDownloadResult::Failed;
 				outcome.hr = hr;
 				outcome.summary = outcome.result == SymbolDownloadResult::Cancelled
-					? L"Symbol download cancelled."
+					? L"符号下载已取消。"
 					: DescribeDownloadFailure(info.pdbFileName, hr);
 				outcome.details = std::format(
-					L"Module: {}\nPath: {}\nPDB: {}\nURL: {}",
+					L"模块：{}\n路径：{}\nPDB：{}\nURL：{}",
 					info.moduleName,
 					info.modulePath,
 					info.pdbFileName,
@@ -413,14 +413,14 @@ namespace OpenGlass
 				MakeProgress(
 					module.basePercent + 50,
 					false,
-					std::format(L"Finished {}", info.pdbFileName),
-					L"Local symbol cache updated."
+					std::format(L"{} 下载完成", info.pdbFileName),
+					L"本地符号缓存已更新。"
 				)
 			);
 		}
 
 		outcome.result = SymbolDownloadResult::Success;
-		outcome.summary = L"Required symbols downloaded successfully.";
+		outcome.summary = L"所需符号下载成功。";
 		return outcome;
 	}
 }

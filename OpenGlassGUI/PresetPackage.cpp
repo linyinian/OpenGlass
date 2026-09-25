@@ -41,7 +41,7 @@ namespace OpenGlass::PresetPackages
 					result += character;
 				}
 			}
-			return result.empty() ? L"<empty name>" : result;
+			return result.empty() ? L"<空名称>" : result;
 		}
 
 		std::string ToUtf8(std::wstring_view value)
@@ -661,7 +661,7 @@ namespace OpenGlass::PresetPackages
 			if (end == std::wstring::npos) break;
 			remaining.remove_prefix(end + 1);
 		}
-		return L"Custom license";
+		return L"自定义许可协议";
 	}
 
 	Package LoadArchive(const std::filesystem::path& path)

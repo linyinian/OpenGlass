@@ -34,8 +34,8 @@ namespace OpenGlass
 		{
 			if (url.empty()) return;
 			if (wxMessageBox(
-				L"Open this unverified external link in your default browser?\n\n" + url,
-				L"Open external link",
+				L"要在默认浏览器中打开这个未经验证的外部链接吗？\n\n" + url,
+				L"打开外部链接",
 				wxYES_NO | wxNO_DEFAULT | wxICON_WARNING,
 				parent
 			) == wxYES)
@@ -58,9 +58,9 @@ namespace OpenGlass
 		void ShowPackageInformationMenu(wxWindow* parent, wxWindow* anchor, const PresetPackages::Package& package)
 		{
 			wxMenu menu;
-			menu.Append(ViewLicenseButtonId, L"View LICENSE");
+			menu.Append(ViewLicenseButtonId, L"查看许可协议");
 			menu.Enable(ViewLicenseButtonId, !package.licenseText.empty());
-			menu.Append(OpenAuthorHomepageButtonId, L"Open author homepage...");
+			menu.Append(OpenAuthorHomepageButtonId, L"打开作者主页...");
 			switch (anchor->GetPopupMenuSelectionFromUser(menu, 0, anchor->GetClientSize().GetHeight()))
 			{
 			case ViewLicenseButtonId:
@@ -79,18 +79,18 @@ namespace OpenGlass
 				DWORD value{};
 				return config.TryGetDword(std::wstring(spec.name), value)
 					? std::format(L"0x{:08X}", value)
-					: L"<absent>";
+					: L"<无>";
 			}
 			std::wstring value;
-			return config.TryGetString(std::wstring(spec.name), value) ? value : L"<absent>";
+			return config.TryGetString(std::wstring(spec.name), value) ? value : L"<无>";
 		}
 
 		std::wstring PackageValueText(const PresetPackages::SettingValue& value)
 		{
-			if (std::holds_alternative<std::monostate>(value)) return L"<delete>";
+			if (std::holds_alternative<std::monostate>(value)) return L"<删除>";
 			if (const auto dword = std::get_if<DWORD>(&value)) return std::format(L"0x{:08X}", *dword);
 			const auto& asset = std::get<PresetPackages::AssetReference>(value);
-			return L"<package>/" + wxString::FromUTF8(asset.path).ToStdWstring();
+			return L"<包>/" + wxString::FromUTF8(asset.path).ToStdWstring();
 		}
 
 		bool PackageValueWouldChange(const Settings::Spec& spec, const PresetPackages::SettingValue& value, const RegistryConfig& config)
@@ -110,7 +110,7 @@ namespace OpenGlass
 		{
 			if (package.ignoredSettingCount == 0) return;
 			output += std::format(
-				L"\r\nIgnored settings: {} (not recognized by this OpenGlass build and not applied)\r\n",
+				L"\r\n已忽略的设置：{}（当前 OpenGlass 版本无法识别，未应用）\r\n",
 				package.ignoredSettingCount
 			);
 			for (const auto& name : package.ignoredSettingNames)
@@ -122,7 +122,7 @@ namespace OpenGlass
 			if (package.ignoredSettingCount > package.ignoredSettingNames.size())
 			{
 				output += std::format(
-					L"  ... and {} more\r\n",
+					L"  ... 以及另外 {} 项\r\n",
 					package.ignoredSettingCount - package.ignoredSettingNames.size()
 				);
 			}
@@ -150,13 +150,13 @@ namespace OpenGlass
 			bool importing
 		)
 		{
-			wxDialog dialog(parent, wxID_ANY, L"Review preset pack", wxDefaultPosition, wxSize(780, 680), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
+			wxDialog dialog(parent, wxID_ANY, L"审阅预设包", wxDefaultPosition, wxSize(780, 680), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
 			auto* root = new wxBoxSizer(wxVERTICAL);
 			const auto licenseName = package.licenseText.empty()
-				? wxString(L"Not provided (all rights reserved by default)")
+				? wxString(L"未提供（默认保留所有权利）")
 				: wxString(package.metadata.licenseName);
 			root->Add(new wxStaticText(&dialog, wxID_ANY, wxString::Format(
-				L"%s\nUUID: %s\nCatalog version: %u\nAuthor: %s (unverified)\nLicense: %s",
+				L"%s\nUUID：%s\n目录版本：%u\n作者：%s（未验证）\n许可协议：%s",
 				package.metadata.name.c_str(),
 				wxString::FromUTF8(package.metadata.uuid),
 				package.catalogVersion,
@@ -165,8 +165,8 @@ namespace OpenGlass
 			)), 0, wxEXPAND | wxALL, 10);
 
 			std::wstring details =
-				L"Application scope: system-wide OpenGlass configuration; Windows colorization values remain specific to the current user.\r\n\r\n"
-				L"Configuration changes if applied (complete Replace):\r\n";
+				L"应用范围：全局 OpenGlass 配置；Windows 颜色值仍仅对当前用户生效。\r\n\r\n"
+				L"应用后将进行的配置更改（完全替换）：\r\n";
 			bool hasSensitive{};
 			bool restartRequired{};
 			for (const auto& [id, value] : package.settings)
@@ -175,37 +175,37 @@ namespace OpenGlass
 				const bool changes = PackageValueWouldChange(spec, value, config);
 				details += std::format(
 					L"{} {}: {} -> {}{}{}\r\n",
-					std::holds_alternative<std::monostate>(value) ? L"DELETE" : L"SET",
+					std::holds_alternative<std::monostate>(value) ? L"删除" : L"设置",
 					spec.name,
 					CurrentValueText(spec, config),
 					PackageValueText(value),
-					spec.sensitive && changes ? L" [SENSITIVE]" : L"",
-					spec.impact == Settings::UpdateImpact::RestartRequired && changes ? L" [RESTART REQUIRED]" : L""
+					spec.sensitive && changes ? L" [敏感]" : L"",
+					spec.impact == Settings::UpdateImpact::RestartRequired && changes ? L" [需重启]" : L""
 				);
 				hasSensitive |= spec.sensitive && changes;
 				restartRequired |= spec.impact == Settings::UpdateImpact::RestartRequired && changes;
 			}
 			AppendIgnoredSettings(details, package);
-			details += L"\r\nAssets:\r\n";
+			details += L"\r\n资源文件：\r\n";
 			for (const auto& [name, size] : package.assetSummary)
 			{
-				details += std::format(L"  {} ({} bytes)\r\n", wxString::FromUTF8(name).ToStdWstring(), size);
+				details += std::format(L"  {}（{} 字节）\r\n", wxString::FromUTF8(name).ToStdWstring(), size);
 			}
-			if (hasSensitive) details += L"\r\nSensitive settings and graphics decoded by dwm.exe require special review.\r\n";
-			if (restartRequired) details += L"Restart-required settings will not trigger an automatic DWM or service restart.\r\n";
+			if (hasSensitive) details += L"\r\n敏感设置以及由 dwm.exe 解码的图形需要特别审阅。\r\n";
+			if (restartRequired) details += L"需重启的设置不会自动触发 DWM 或服务重启。\r\n";
 			details += package.licenseText.empty()
-				? L"The package author is not verified. No license was provided; the entire package grants no additional permission to modify or redistribute its contents."
-				: L"The package author is not verified. Unless the LICENSE says otherwise, it applies package-wide to all copyrightable contents the author is authorized to license. Third-party asset terms must be identified in that LICENSE.";
+				? L"包作者未经验证。未提供许可协议；整个包不授予修改或再分发其内容的任何额外许可。"
+				: L"包作者未经验证。除非许可协议另有说明，否则其整体适用于作者有权授权的所有可版权内容。第三方资源条款必须在该许可协议中注明。";
 
 			auto* text = new wxTextCtrl(&dialog, wxID_ANY, details, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE | wxTE_READONLY | wxTE_RICH2);
 			root->Add(text, 1, wxEXPAND | wxLEFT | wxRIGHT, 10);
-			auto* packageInformation = new wxButton(&dialog, wxID_ANY, L"Package information...");
+			auto* packageInformation = new wxButton(&dialog, wxID_ANY, L"包信息...");
 			root->Add(packageInformation, 0, wxLEFT | wxRIGHT | wxTOP, 10);
 			if (importing)
 			{
 				auto* buttons = new wxBoxSizer(wxHORIZONTAL);
-				auto* importAndApply = new wxButton(&dialog, ImportAndApplyButtonId, L"Import and apply");
-				auto* importOnly = new wxButton(&dialog, ImportOnlyButtonId, L"Import only");
+				auto* importAndApply = new wxButton(&dialog, ImportAndApplyButtonId, L"导入并应用");
+				auto* importOnly = new wxButton(&dialog, ImportOnlyButtonId, L"仅导入");
 				auto* cancel = new wxButton(&dialog, wxID_CANCEL);
 				importAndApply->SetDefault();
 				buttons->AddStretchSpacer();
@@ -221,7 +221,7 @@ namespace OpenGlass
 				auto* buttons = dialog.CreateSeparatedButtonSizer(wxOK | wxCANCEL);
 				if (auto* apply = dialog.FindWindow(wxID_OK))
 				{
-					apply->SetLabel(L"Apply");
+					apply->SetLabel(L"应用");
 				}
 				root->Add(buttons, 0, wxEXPAND | wxLEFT | wxRIGHT | wxBOTTOM, 10);
 			}
@@ -244,13 +244,13 @@ namespace OpenGlass
 
 		bool ShowBatchImportPreview(wxWindow* parent, std::span<const PresetPackages::Package> packages)
 		{
-			wxDialog dialog(parent, wxID_ANY, L"Review preset pack import", wxDefaultPosition, wxSize(720, 600), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
+			wxDialog dialog(parent, wxID_ANY, L"审阅预设包导入", wxDefaultPosition, wxSize(720, 600), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
 			auto* root = new wxBoxSizer(wxVERTICAL);
 			root->Add(new wxStaticText(
 				&dialog,
 				wxID_ANY,
 				wxString::Format(
-					L"%zu preset packs passed initial validation. \r\nImporting them adds immutable packs to the local library and does not change the current configuration.",
+					L"%zu 个预设包已通过初步校验。\r\n导入后会将不可变包添加到本地库，不会更改当前配置。",
 					packages.size()
 				)
 			), 0, wxEXPAND | wxALL, 10);
@@ -258,10 +258,10 @@ namespace OpenGlass
 			for (const auto& package : packages)
 			{
 				const auto licenseName = package.licenseText.empty()
-					? std::wstring(L"Not provided (all rights reserved by default)")
+					? std::wstring(L"未提供（默认保留所有权利）")
 					: package.metadata.licenseName;
 				details += std::format(
-					L"{}\r\n  File: {}\r\n  UUID: {}\r\n  Author: {} (unverified)\r\n  License: {}\r\n  Assets: {}\r\n",
+					L"{}\r\n  文件：{}\r\n  UUID：{}\r\n  作者：{}（未验证）\r\n  许可协议：{}\r\n  资源文件：{}\r\n",
 					package.metadata.name,
 					package.source.filename().wstring(),
 					wxString::FromUTF8(package.metadata.uuid).ToStdWstring(),
@@ -274,7 +274,7 @@ namespace OpenGlass
 			}
 			root->Add(new wxTextCtrl(&dialog, wxID_ANY, details, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE | wxTE_READONLY | wxTE_RICH2), 1, wxEXPAND | wxLEFT | wxRIGHT, 10);
 			auto* buttons = dialog.CreateSeparatedButtonSizer(wxOK | wxCANCEL);
-			if (auto* importAll = dialog.FindWindow(wxID_OK)) importAll->SetLabel(L"Import all");
+			if (auto* importAll = dialog.FindWindow(wxID_OK)) importAll->SetLabel(L"全部导入");
 			root->Add(buttons, 0, wxEXPAND | wxALL, 10);
 			dialog.SetSizer(root);
 			return dialog.ShowModal() == wxID_OK;
@@ -390,13 +390,13 @@ namespace OpenGlass
 				const wxString& licenseText,
 				bool installAfterCreate
 			)
-				: wxDialog(parent, wxID_ANY, L"Create preset ZIP", wxDefaultPosition, wxSize(650, 700), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
+				: wxDialog(parent, wxID_ANY, L"创建预设 ZIP", wxDefaultPosition, wxSize(650, 700), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)
 			{
 				auto* root = new wxBoxSizer(wxVERTICAL);
 				auto* scopeNote = new wxStaticText(
 					this,
 					wxID_ANY,
-					L"Captures the current preview, including unsaved changes; Save is not required. Preset packs apply system-wide except for Windows colorization."
+					L"捕获当前预览（包括未保存的更改），无需先保存。预设包除 Windows 颜色外均全局生效。"
 				);
 				scopeNote->Wrap(610);
 				root->Add(scopeNote, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
@@ -412,40 +412,40 @@ namespace OpenGlass
 				m_author = new wxTextCtrl(this, wxID_ANY, defaultAuthor);
 				m_authorHomepage = new wxTextCtrl(this, wxID_ANY, defaultHomepage);
 				m_authorHomepage->SetHint(L"https://example.com");
-				add(L"Name", m_name);
-				add(L"Description (optional)", m_description);
-				add(L"Author", m_author);
-				add(L"Author homepage", m_authorHomepage);
+				add(L"名称", m_name);
+				add(L"描述（可选）", m_description);
+				add(L"作者", m_author);
+				add(L"作者主页", m_authorHomepage);
 				root->Add(grid, 0, wxEXPAND | wxALL, 10);
 
 				auto* licenseHeader = new wxBoxSizer(wxHORIZONTAL);
-				m_includeLicense = new wxCheckBox(this, wxID_ANY, L"Include LICENSE");
+				m_includeLicense = new wxCheckBox(this, wxID_ANY, L"包含许可协议");
 				m_includeLicense->SetValue(includeLicense);
 				licenseHeader->Add(m_includeLicense, 0, wxALIGN_CENTER_VERTICAL);
 				licenseHeader->AddStretchSpacer();
-				auto* loadLicense = new wxButton(this, wxID_ANY, L"Load from file...");
+				auto* loadLicense = new wxButton(this, wxID_ANY, L"从文件加载...");
 				licenseHeader->Add(loadLicense, 0);
 				root->Add(licenseHeader, 0, wxEXPAND | wxLEFT | wxRIGHT, 10);
-				m_detectedLicense = new wxStaticText(this, wxID_ANY, L"Detected license: Custom license");
+				m_detectedLicense = new wxStaticText(this, wxID_ANY, L"检测到许可协议：自定义许可协议");
 				root->Add(m_detectedLicense, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
 				auto* licenseScope = new wxStaticText(
 					this,
 					wxID_ANY,
-					L"The LICENSE applies to the whole preset pack unless its text says otherwise. Only include content you may license, and identify any third-party asset terms in the LICENSE."
+					L"除非许可协议文本另有说明，否则其适用于整个预设包。仅可包含你有权授权的内容，并在许可协议中注明第三方资源条款。"
 				);
 				licenseScope->Wrap(610);
 				root->Add(licenseScope, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
 				m_licenseText = new wxTextCtrl(this, wxID_ANY, licenseText, wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE | wxTE_RICH2);
 				root->Add(m_licenseText, 1, wxEXPAND | wxALL, 10);
-				m_installAfterCreate = new wxCheckBox(this, wxID_ANY, L"Install in Preset packs after creating");
+				m_installAfterCreate = new wxCheckBox(this, wxID_ANY, L"创建后安装到预设包库");
 				m_installAfterCreate->SetValue(installAfterCreate);
-				m_installAfterCreate->SetToolTip(L"Deploy the newly created immutable ZIP to the local OpenGlass preset library. It will not be applied to the current configuration.");
+				m_installAfterCreate->SetToolTip(L"将新建的不可变 ZIP 部署到本地 OpenGlass 预设库。不会应用到当前配置。");
 				root->Add(m_installAfterCreate, 0, wxEXPAND | wxLEFT | wxRIGHT, 10);
 				root->Add(CreateSeparatedButtonSizer(wxOK | wxCANCEL), 0, wxEXPAND | wxALL, 10);
 				SetSizer(root);
 				loadLicense->Bind(wxEVT_BUTTON, [this](wxCommandEvent&)
 				{
-					wxFileDialog dialog(this, L"Select LICENSE text", wxEmptyString, wxEmptyString, L"Text files (*.txt;LICENSE)|*.txt;LICENSE|All files (*.*)|*.*", wxFD_OPEN | wxFD_FILE_MUST_EXIST);
+					wxFileDialog dialog(this, L"选择许可协议文本", wxEmptyString, wxEmptyString, L"文本文件 (*.txt;LICENSE)|*.txt;LICENSE|所有文件 (*.*)|*.*", wxFD_OPEN | wxFD_FILE_MUST_EXIST);
 					if (dialog.ShowModal() != wxID_OK) return;
 					wxFFileInputStream input(dialog.GetPath());
 					if (!input.IsOk()) return;
@@ -462,8 +462,8 @@ namespace OpenGlass
 						? PresetPackages::InferLicenseName(m_licenseText->GetValue().ToStdString(wxConvUTF8))
 						: std::wstring{};
 					m_detectedLicense->SetLabel(included
-						? wxString(L"Detected license: ") + wxString(name.empty() ? L"(enter or load LICENSE text)" : name)
-						: wxString(L"No LICENSE: all rights reserved by default"));
+						? wxString(L"检测到许可协议：") + wxString(name.empty() ? L"（请输入或加载许可协议文本）" : name)
+						: wxString(L"无许可协议：默认保留所有权利"));
 				};
 				m_includeLicense->Bind(wxEVT_CHECKBOX, [updateLicenseState](wxCommandEvent&) { updateLicenseState(); });
 				m_licenseText->Bind(wxEVT_TEXT, [updateLicenseState](wxCommandEvent&) { updateLicenseState(); });
@@ -479,26 +479,26 @@ namespace OpenGlass
 						|| m_author->GetValue().Trim().empty()
 						|| m_authorHomepage->GetValue().Trim().empty())
 					{
-						wxMessageBox(L"Name, author and author homepage are required.", L"Create preset", wxOK | wxICON_ERROR, this);
+						wxMessageBox(L"名称、作者和作者主页为必填项。", L"创建预设", wxOK | wxICON_ERROR, this);
 						return;
 					}
 					if (m_name->GetValue().length() > 128
 						|| m_description->GetValue().length() > 4096
 						|| m_author->GetValue().length() > 256)
 					{
-						wxMessageBox(L"Name may contain at most 128 characters, description 4096, and author 256.", L"Create preset", wxOK | wxICON_ERROR, this);
+						wxMessageBox(L"名称最多 128 个字符，描述最多 4096 个，作者最多 256 个。", L"创建预设", wxOK | wxICON_ERROR, this);
 						return;
 					}
 					if (!PresetPackages::IsValidHomepageUrl(m_authorHomepage->GetValue().ToStdWstring()))
 					{
-						wxMessageBox(L"Author homepage must be a complete absolute http:// or https:// URL, for example https://example.com.", L"Create preset", wxOK | wxICON_ERROR, this);
+						wxMessageBox(L"作者主页必须是完整的 http:// 或 https:// 绝对 URL，例如 https://example.com。", L"创建预设", wxOK | wxICON_ERROR, this);
 						m_authorHomepage->SetFocus();
 						m_authorHomepage->SelectAll();
 						return;
 					}
 					if (m_includeLicense->GetValue() && m_licenseText->GetValue().Trim().empty())
 					{
-						wxMessageBox(L"Enter or load LICENSE text, or clear Include LICENSE.", L"Create preset", wxOK | wxICON_ERROR, this);
+						wxMessageBox(L"请输入或加载许可协议文本，或取消勾选「包含许可协议」。", L"创建预设", wxOK | wxICON_ERROR, this);
 						return;
 					}
 					EndModal(wxID_OK);
@@ -574,10 +574,10 @@ namespace OpenGlass
 		auto* scopeNote = new wxStaticText(
 			panel,
 			wxID_ANY,
-			L"Preset packs: colorization is per-user; all other settings are system-wide."
+			L"预设包：颜色为按用户生效；其他设置为全局生效。"
 		);
 		scopeNote->SetToolTip(
-			L"The OpenGlass GUI and preset packs target a single-user PC. Only Windows colorization remains independent for each user."
+			L"OpenGlass GUI 和预设包面向单用户 PC。只有 Windows 颜色值保持每个用户独立。"
 		);
 		root->Add(scopeNote, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 8);
 		auto* content = new wxBoxSizer(wxHORIZONTAL);
@@ -592,13 +592,13 @@ namespace OpenGlass
 		auto* buttons = new wxBoxSizer(wxVERTICAL);
 		auto* libraryActions = new wxBoxSizer(wxHORIZONTAL);
 		auto* authoringActions = new wxBoxSizer(wxHORIZONTAL);
-		m_btnImportPreset = new wxButton(panel, wxID_ANY, L"Import...");
-		m_btnApplyPreset = new wxButton(panel, wxID_ANY, L"Apply");
-		m_btnCreatePreset = new wxButton(panel, wxID_ANY, L"Create from current preview...");
-		m_btnCreatePreset->SetToolTip(L"Create a preset pack from the settings currently applied for preview, including unsaved changes. Saving first is not required.");
-		m_btnResetPresetSettings = new wxButton(panel, wxID_ANY, L"Reset all settings...");
-		m_btnRemovePreset = new wxButton(panel, wxID_ANY, L"Remove");
-		m_btnPresetInformation = new wxButton(panel, wxID_ANY, L"Package information...");
+		m_btnImportPreset = new wxButton(panel, wxID_ANY, L"导入...");
+		m_btnApplyPreset = new wxButton(panel, wxID_ANY, L"应用");
+		m_btnCreatePreset = new wxButton(panel, wxID_ANY, L"从当前预览创建...");
+		m_btnCreatePreset->SetToolTip(L"根据当前预览所应用的设置创建预设包，包括未保存的更改。无需先保存。");
+		m_btnResetPresetSettings = new wxButton(panel, wxID_ANY, L"重置所有设置...");
+		m_btnRemovePreset = new wxButton(panel, wxID_ANY, L"移除");
+		m_btnPresetInformation = new wxButton(panel, wxID_ANY, L"包信息...");
 		libraryActions->Add(m_btnImportPreset, 0, wxRIGHT, 6);
 		libraryActions->Add(m_btnApplyPreset, 0, wxRIGHT, 6);
 		libraryActions->Add(m_btnPresetInformation, 0, wxRIGHT, 6);
@@ -611,7 +611,7 @@ namespace OpenGlass
 		root->Add(buttons, 0, wxEXPAND | wxLEFT | wxRIGHT | wxBOTTOM, 8);
 		panel->SetSizer(root);
 		panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW));
-		m_notebook->AddPage(panel, L"Preset packs");
+		m_notebook->AddPage(panel, L"预设包");
 
 		m_lstPresetPackages->Bind(wxEVT_LIST_ITEM_SELECTED, [this](wxListEvent&) { UpdatePresetPackageDetails(); });
 		m_lstPresetPackages->Bind(wxEVT_SIZE, [this](wxSizeEvent& event)
@@ -665,7 +665,7 @@ namespace OpenGlass
 		{
 			const auto error = wil::ResultFromCaughtException();
 			m_presetPackages.clear();
-			wxMessageBox(wxString::Format(L"Installed preset packages could not be enumerated (HRESULT 0x%08lX).", static_cast<unsigned long>(error)), L"OpenGlass presets", wxOK | wxICON_ERROR, this);
+			wxMessageBox(wxString::Format(L"无法枚举已安装的预设包 (HRESULT 0x%08lX)。", static_cast<unsigned long>(error)), L"OpenGlass 预设", wxOK | wxICON_ERROR, this);
 		}
 		RebuildPresetPackageList();
 	}
@@ -735,7 +735,7 @@ namespace OpenGlass
 		}
 		const auto& package = m_presetPackages[selection];
 		m_btnPresetInformation->Enable(true);
-		m_btnPresetInformation->SetToolTip(L"View the package LICENSE or open the unverified author homepage.");
+		m_btnPresetInformation->SetToolTip(L"查看包的许可协议或打开未经验证的作者主页。");
 		std::size_t configured{}, sensitive{};
 		for (const auto& [id, value] : package.settings)
 		{
@@ -743,12 +743,12 @@ namespace OpenGlass
 			if (Settings::Get(id).sensitive && !std::holds_alternative<std::monostate>(value)) ++sensitive;
 		}
 		const auto licenseName = package.licenseText.empty()
-			? wxString(L"Not provided (all rights reserved by default)")
+			? wxString(L"未提供（默认保留所有权利）")
 			: wxString(package.metadata.licenseName);
 		std::wstring heading = package.metadata.name;
 		if (!package.metadata.description.empty()) heading += L"\r\n\r\n" + package.metadata.description;
 		std::wstring details = wxString::Format(
-			L"%s\n\nUUID: %s\nCatalog version: %u\nAuthor: %s\nHomepage: %s\nLicense: %s\n\nApplication scope: system-wide, except Windows colorization values for the current user\nConfigured settings: %zu\nAssets: %zu\nSensitive settings: %zu",
+			L"%s\n\nUUID：%s\n目录版本：%u\n作者：%s\n主页：%s\n许可协议：%s\n\n应用范围：全局生效，当前用户的 Windows 颜色值除外\n已配置设置：%zu\n资源文件：%zu\n敏感设置：%zu",
 			heading,
 			wxString::FromUTF8(package.metadata.uuid),
 			package.catalogVersion,
@@ -763,14 +763,14 @@ namespace OpenGlass
 		AppendIgnoredSettings(details, package);
 		details += L"\r\n";
 		details += package.licenseText.empty()
-			? L"No permission to modify or redistribute the package contents is granted."
-			: L"Author identity is not verified. Unless stated otherwise in the LICENSE, it applies package-wide to all copyrightable contents the author is authorized to license; third-party asset terms must be listed there.";
+			? L"未授予修改或再分发包内容的许可。"
+			: L"作者身份未经验证。除非许可协议另有说明，否则其整体适用于作者有权授权的所有可版权内容；第三方资源条款须在其中列明。";
 		m_txtPresetDetails->SetValue(details);
 	}
 
 	void MainFrame::ImportPresetPackage()
 	{
-		wxFileDialog dialog(this, L"Import OpenGlass preset ZIP", wxEmptyString, wxEmptyString, L"ZIP archives (*.zip)|*.zip", wxFD_OPEN | wxFD_FILE_MUST_EXIST);
+		wxFileDialog dialog(this, L"导入 OpenGlass 预设 ZIP", wxEmptyString, wxEmptyString, L"ZIP 压缩包 (*.zip)|*.zip", wxFD_OPEN | wxFD_FILE_MUST_EXIST);
 		if (dialog.ShowModal() != wxID_OK) return;
 		ImportPresetPackage(dialog.GetPath().ToStdWstring());
 	}
@@ -780,7 +780,7 @@ namespace OpenGlass
 		if (event.GetNumberOfFiles() == 0) return;
 		if (static_cast<std::size_t>(event.GetNumberOfFiles()) > MaximumBatchPackageCount)
 		{
-			wxMessageBox(wxString::Format(L"At most %zu preset ZIPs can be imported at once.", MaximumBatchPackageCount), L"Preset import", wxOK | wxICON_INFORMATION, this);
+			wxMessageBox(wxString::Format(L"一次最多导入 %zu 个预设 ZIP。", MaximumBatchPackageCount), L"预设导入", wxOK | wxICON_INFORMATION, this);
 			return;
 		}
 		std::vector<std::filesystem::path> paths;
@@ -792,7 +792,7 @@ namespace OpenGlass
 			std::ranges::transform(extension, extension.begin(), [](wchar_t value) { return static_cast<wchar_t>(::towlower(value)); });
 			if (extension != L".zip")
 			{
-				wxMessageBox(L"Every dropped file must be a standard .zip preset package. Nothing was imported.", L"Preset import", wxOK | wxICON_INFORMATION, this);
+				wxMessageBox(L"拖入的每个文件都必须是标准 .zip 预设包。未导入任何内容。", L"预设导入", wxOK | wxICON_INFORMATION, this);
 				return;
 			}
 			paths.push_back(std::move(path));
@@ -879,21 +879,21 @@ namespace OpenGlass
 				}
 			}
 			wxMessageBox(wxString::Format(
-				L"Preset pack import completed.\n\nNewly imported: %zu\nAlready installed: %zu\nThe current configuration was not changed.",
+				L"预设包导入完成。\n\n新导入：%zu\n已安装：%zu\n当前配置未被更改。",
 				createdCount,
 				reusedCount
-			), L"Preset import", wxOK | wxICON_INFORMATION, this);
+			), L"预设导入", wxOK | wxICON_INFORMATION, this);
 		}
 		catch (...)
 		{
 			const auto error = wil::ResultFromCaughtException();
 			wxMessageBox(wxString::Format(
 				rollbackIncomplete
-					? L"The preset batch could not be imported, and cleanup of newly deployed packages was incomplete.\n\nFile: %s\nHRESULT: 0x%08lX"
-					: L"The preset batch could not be imported. Nothing from this batch was retained.\n\nFile: %s\nHRESULT: 0x%08lX",
+					? L"无法导入该预设批次，且新部署包的清理未完成。\n\n文件：%s\nHRESULT：0x%08lX"
+					: L"无法导入该预设批次。该批次未保留任何内容。\n\n文件：%s\nHRESULT：0x%08lX",
 				currentPath.filename().wstring(),
 				static_cast<unsigned long>(error)
-			), L"Preset import", wxOK | wxICON_ERROR, this);
+			), L"预设导入", wxOK | wxICON_ERROR, this);
 			RefreshPresetPackages();
 		}
 	}
@@ -944,9 +944,9 @@ namespace OpenGlass
 			}
 			wxMessageBox(
 				deployment.created
-					? L"The preset pack was imported without changing the current configuration."
-					: L"The identical preset pack was already installed; the current configuration was not changed.",
-				L"Preset import",
+					? L"预设包已导入，当前配置未更改。"
+					: L"相同的预设包已安装；当前配置未更改。",
+				L"预设导入",
 				wxOK | wxICON_INFORMATION,
 				this
 			);
@@ -954,7 +954,7 @@ namespace OpenGlass
 		catch (...)
 		{
 			const auto error = wil::ResultFromCaughtException();
-			wxMessageBox(wxString::Format(L"The preset ZIP could not be imported (HRESULT 0x%08lX).", static_cast<unsigned long>(error)), L"Preset import", wxOK | wxICON_ERROR, this);
+			wxMessageBox(wxString::Format(L"无法导入预设 ZIP (HRESULT 0x%08lX)。", static_cast<unsigned long>(error)), L"预设导入", wxOK | wxICON_ERROR, this);
 		}
 	}
 
@@ -975,8 +975,8 @@ namespace OpenGlass
 		const auto sensitiveChanges = SensitiveChangeSummary(inputPackage, *m_config);
 		if (!sensitiveChanges.empty()
 			&& wxMessageBox(
-				L"This preset changes security- or stability-sensitive settings, including graphics that dwm.exe may decode:\n" + sensitiveChanges + L"\n\nApply these changes?",
-				L"Confirm sensitive preset settings",
+				L"此预设更改了安全或稳定性敏感设置，包括 dwm.exe 可能解码的图形：\n" + sensitiveChanges + L"\n\n要应用这些更改吗？",
+				L"确认敏感预设设置",
 				wxYES_NO | wxNO_DEFAULT | wxICON_WARNING,
 				this
 			) != wxYES)
@@ -1067,7 +1067,7 @@ namespace OpenGlass
 			LoadSettings(false);
 			if (restartRequired)
 			{
-				wxMessageBox(L"Some settings require restarting DWM or signing out before they become active. OpenGlass will not restart DWM automatically.", L"Preset applied", wxOK | wxICON_INFORMATION, this);
+				wxMessageBox(L"部分设置需要重启 DWM 或注销后才能生效。OpenGlass 不会自动重启 DWM。", L"预设已应用", wxOK | wxICON_INFORMATION, this);
 			}
 			return true;
 		}
@@ -1111,10 +1111,10 @@ namespace OpenGlass
 			}
 			wxMessageBox(wxString::Format(
 				rolledBack
-					? L"Applying the preset failed and this attempt was reverted (HRESULT 0x%08lX)."
-					: L"Applying the preset failed, and reverting this attempt was incomplete (HRESULT 0x%08lX). The deployed package was retained to avoid breaking an asset path.",
+					? L"应用预设失败，本次更改已回滚 (HRESULT 0x%08lX)。"
+					: L"应用预设失败，且回滚未完成 (HRESULT 0x%08lX)。已保留部署的包以避免资源路径失效。",
 				static_cast<unsigned long>(error)
-			), L"Preset apply", wxOK | wxICON_ERROR, this);
+			), L"应用预设", wxOK | wxICON_ERROR, this);
 			return false;
 		}
 	}
@@ -1185,7 +1185,7 @@ namespace OpenGlass
 				}
 			}
 			const auto suggestedName = SanitizePackageFileName(request.metadata.name) + L"-" + wxString::FromUTF8(request.metadata.uuid).ToStdWstring() + L".zip";
-			wxFileDialog save(this, L"Save preset ZIP", wxEmptyString, suggestedName, L"ZIP archives (*.zip)|*.zip", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
+			wxFileDialog save(this, L"保存预设 ZIP", wxEmptyString, suggestedName, L"ZIP 压缩包 (*.zip)|*.zip", wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
 			if (save.ShowModal() != wxID_OK) return;
 			archivePath = save.GetPath().ToStdWstring();
 			PresetPackages::CreateArchive(archivePath, std::move(request));
@@ -1221,11 +1221,11 @@ namespace OpenGlass
 					SelectPresetPackageRow(static_cast<std::size_t>(std::distance(m_presetPackages.begin(), installed)));
 					UpdatePresetPackageDetails();
 				}
-				wxMessageBox(L"The immutable preset ZIP was created and installed successfully. The current configuration was not changed.", L"Create preset", wxOK | wxICON_INFORMATION, this);
+				wxMessageBox(L"不可变预设 ZIP 已成功创建并安装。当前配置未被更改。", L"创建预设", wxOK | wxICON_INFORMATION, this);
 			}
 			else
 			{
-				wxMessageBox(L"The immutable preset ZIP was created successfully.", L"Create preset", wxOK | wxICON_INFORMATION, this);
+				wxMessageBox(L"不可变预设 ZIP 已成功创建。", L"创建预设", wxOK | wxICON_INFORMATION, this);
 			}
 		}
 		catch (...)
@@ -1233,17 +1233,17 @@ namespace OpenGlass
 			const auto error = wil::ResultFromCaughtException();
 			const auto message = archiveCreated
 				? wxString::Format(
-					L"The preset ZIP was created at:\n%s\n\nbut it could not be installed (HRESULT 0x%08lX).",
+					L"预设 ZIP 已创建于：\n%s\n\n但无法安装 (HRESULT 0x%08lX)。",
 					archivePath.wstring(),
 					static_cast<unsigned long>(error)
 				)
 				: wxString::Format(
-					L"The preset ZIP could not be created (HRESULT 0x%08lX).",
+					L"无法创建预设 ZIP (HRESULT 0x%08lX)。",
 					static_cast<unsigned long>(error)
 				);
 			wxMessageBox(
 				message,
-				L"Create preset",
+				L"创建预设",
 				wxOK | wxICON_ERROR,
 				this
 			);
@@ -1288,8 +1288,8 @@ namespace OpenGlass
 		if (snapshots.empty())
 		{
 			wxMessageBox(
-				L"All preset-pack settings are already using their default or inherited values.",
-				L"Reset all settings",
+				L"所有预设包设置均已使用默认或继承值。",
+				L"重置所有设置",
 				wxOK | wxICON_INFORMATION,
 				this
 			);
@@ -1297,11 +1297,11 @@ namespace OpenGlass
 		}
 		if (wxMessageBox(
 			wxString::Format(
-				L"Delete %zu stored preset-pack value(s) and return every packaged setting to its default or inherited value?\n\n"
-				L"This includes Windows colorization values for the target user and system-wide OpenGlass settings. The change is immediate; use Revert to restore the current values before saving.",
+				L"删除 %zu 个已存储的预设包值，并将所有打包设置恢复为默认或继承值？\n\n"
+				L"这包括目标用户的 Windows 颜色值和全局 OpenGlass 设置。更改立即生效；保存前可使用「还原」恢复当前值。",
 				snapshots.size()
 			),
-			L"Reset all settings",
+			L"重置所有设置",
 			wxYES_NO | wxNO_DEFAULT | wxICON_WARNING,
 			this
 		) != wxYES)
@@ -1338,9 +1338,9 @@ namespace OpenGlass
 			LoadSettings(false);
 			wxMessageBox(
 				FAILED(rollbackFailure)
-					? wxString::Format(L"Reset failed (HRESULT 0x%08lX), and restoring the previous registry state was incomplete (HRESULT 0x%08lX).", static_cast<unsigned long>(failure), static_cast<unsigned long>(rollbackFailure))
-					: wxString::Format(L"Reset failed (HRESULT 0x%08lX). The previous registry state was restored.", static_cast<unsigned long>(failure)),
-				L"Reset all settings",
+					? wxString::Format(L"重置失败 (HRESULT 0x%08lX)，且恢复先前注册表状态未完成 (HRESULT 0x%08lX)。", static_cast<unsigned long>(failure), static_cast<unsigned long>(rollbackFailure))
+					: wxString::Format(L"重置失败 (HRESULT 0x%08lX)。先前的注册表状态已恢复。", static_cast<unsigned long>(failure)),
+				L"重置所有设置",
 				wxOK | wxICON_ERROR,
 				this
 			);
@@ -1366,18 +1366,18 @@ namespace OpenGlass
 				if (m_config->TryGetString(std::wstring(spec.name), path)
 					&& PathIsWithin(path, package.source))
 				{
-					wxMessageBox(L"This package is still referenced by the active configuration. Apply another preset or clear its assets before removing it.", L"Remove preset", wxOK | wxICON_WARNING, this);
+					wxMessageBox(L"活动配置仍在引用此包。请先应用其他预设或清除其资源文件，再进行移除。", L"移除预设", wxOK | wxICON_WARNING, this);
 					return;
 				}
 			}
-			if (wxMessageBox(L"Remove the selected deployed preset package?", L"Remove preset", wxYES_NO | wxNO_DEFAULT | wxICON_WARNING, this) != wxYES) return;
+			if (wxMessageBox(L"移除选定的已部署预设包？", L"移除预设", wxYES_NO | wxNO_DEFAULT | wxICON_WARNING, this) != wxYES) return;
 			PresetPackages::Remove(package);
 			RefreshPresetPackages();
 		}
 		catch (...)
 		{
 			const auto error = wil::ResultFromCaughtException();
-			wxMessageBox(wxString::Format(L"The package could not be removed (HRESULT 0x%08lX).", static_cast<unsigned long>(error)), L"Remove preset", wxOK | wxICON_ERROR, this);
+			wxMessageBox(wxString::Format(L"无法移除该包 (HRESULT 0x%08lX)。", static_cast<unsigned long>(error)), L"移除预设", wxOK | wxICON_ERROR, this);
 		}
 	}
 }

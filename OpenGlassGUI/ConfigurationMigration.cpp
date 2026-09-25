@@ -55,13 +55,13 @@ namespace OpenGlass::ConfigurationMigration
 
 		bool ConfirmMigration(std::size_t moveCount)
 		{
-			wxDialog dialog(nullptr, wxID_ANY, L"OpenGlass configuration migration", wxDefaultPosition, wxSize(680, 500), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
+			wxDialog dialog(nullptr, wxID_ANY, L"OpenGlass 配置迁移", wxDefaultPosition, wxSize(680, 500), wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER);
 			auto* root = new wxBoxSizer(wxVERTICAL);
 			const auto message = wxString::Format(
-				L"The official OpenGlass GUI now stores the five Windows colorization values and their Override forms for the original interactive user. It stores the other OpenGlass settings it manages system-wide.\n\n"
-				L"OpenGlass itself still reads every supported setting from HKCU before HKLM. Per-user registry configurations and transformation packs remain supported; this migration changes only the locations managed by the official GUI and preset packages.\n\n"
-				L"%zu value(s) are outside those recommended locations and need to be moved or removed. Existing effective values will be preserved. Choosing Exit and migrate later leaves the current configuration unchanged.\n\n"
-				L"Migration is transactional. If any registry operation fails, both hives are restored and the editor will not open.",
+				L"官方 OpenGlass GUI 现在将五个 Windows 颜色值及其 Override 形式按原始交互用户存储，其余由其管理的 OpenGlass 设置则全局存储。\n\n"
+				L"OpenGlass 本身仍按先 HKCU 后 HKLM 的顺序读取所有受支持的设置。按用户注册表配置和美化包仍然受支持；此次迁移仅改变官方 GUI 和预设包所管理的存储位置。\n\n"
+				L"%zu 个值不在上述推荐位置，需要移动或移除。现有生效值将被保留。选择「退出并稍后迁移」将保持当前配置不变。\n\n"
+				L"迁移是事务性的。任何注册表操作失败时，两个配置单元都会被还原，编辑器将不会打开。",
 				moveCount
 			);
 			auto* label = new wxStaticText(&dialog, wxID_ANY, message);
@@ -69,8 +69,8 @@ namespace OpenGlass::ConfigurationMigration
 			root->Add(label, 1, wxEXPAND | wxALL, 16);
 			auto* buttons = new wxBoxSizer(wxHORIZONTAL);
 			buttons->AddStretchSpacer();
-			auto* exitButton = new wxButton(&dialog, wxID_CANCEL, L"Exit and migrate later");
-			auto* migrateButton = new wxButton(&dialog, wxID_OK, L"Migrate and continue");
+			auto* exitButton = new wxButton(&dialog, wxID_CANCEL, L"退出并稍后迁移");
+			auto* migrateButton = new wxButton(&dialog, wxID_OK, L"迁移并继续");
 			buttons->Add(exitButton, 0, wxRIGHT, 8);
 			buttons->Add(migrateButton, 0);
 			root->Add(buttons, 0, wxEXPAND | wxLEFT | wxRIGHT | wxBOTTOM, 16);
@@ -128,9 +128,9 @@ namespace OpenGlass::ConfigurationMigration
 			const auto rollbackFailure = RestoreAll(user, machine, backup);
 			wxMessageBox(
 				FAILED(rollbackFailure)
-					? wxString::Format(L"The configuration migration failed (HRESULT 0x%08lX), and restoring both registry hives was incomplete (HRESULT 0x%08lX).", static_cast<unsigned long>(failure), static_cast<unsigned long>(rollbackFailure))
-					: wxString::Format(L"The configuration migration failed (HRESULT 0x%08lX). Both registry hives were restored.", static_cast<unsigned long>(failure)),
-				L"OpenGlass configuration migration",
+					? wxString::Format(L"配置迁移失败 (HRESULT 0x%08lX)，且两个注册表配置单元的还原未完成 (HRESULT 0x%08lX)。", static_cast<unsigned long>(failure), static_cast<unsigned long>(rollbackFailure))
+					: wxString::Format(L"配置迁移失败 (HRESULT 0x%08lX)。两个注册表配置单元均已还原。", static_cast<unsigned long>(failure)),
+				L"OpenGlass 配置迁移",
 				wxOK | wxICON_ERROR
 			);
 			return false;
