@@ -10,19 +10,6 @@
 
 #pragma comment(lib, "dwmapi.lib")
 
-#ifndef DWMWA_WINDOW_CORNER_PREFERENCE
-#define DWMWA_WINDOW_CORNER_PREFERENCE 33
-#endif
-#ifndef DWMWCP_ROUND
-#define DWMWCP_ROUND 2
-#endif
-#ifndef DWMWA_SYSTEMBACKDROP_TYPE
-#define DWMWA_SYSTEMBACKDROP_TYPE 38
-#endif
-#ifndef DWMSBT_MICA
-#define DWMSBT_MICA 2
-#endif
-
 // IMPLEMENT_APP must be in global scope
 IMPLEMENT_APP(OpenGlass::OpenGlassApp)
 
@@ -36,13 +23,15 @@ namespace OpenGlass
 		// All calls are non-fatal: on failure the window simply keeps the classic look.
 		void EnableWin11WindowEffects(wxFrame* frame)
 		{
-			const HWND hwnd = frame->GetHWND();
+		const HWND hwnd = frame->GetHWND();
 
-			DWM_WINDOW_CORNER_PREFERENCE corner = DWMWCP_ROUND;
-			DwmSetWindowAttribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE, &corner, sizeof(corner));
+		// 33/ROUND and 38/MICA are Win11 DWM attributes; numeric values with a
+		// cast so this compiles regardless of how the SDK declares the enums.
+		DWM_WINDOW_CORNER_PREFERENCE corner = static_cast<DWM_WINDOW_CORNER_PREFERENCE>(2); // DWMWCP_ROUND
+		DwmSetWindowAttribute(hwnd, 33 /* DWMWA_WINDOW_CORNER_PREFERENCE */, &corner, sizeof(corner));
 
-			DWM_SYSTEMBACKDROP_TYPE backdrop = DWMSBT_MICA;
-			if (SUCCEEDED(DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, &backdrop, sizeof(backdrop))))
+		DWM_SYSTEMBACKDROP_TYPE backdrop = static_cast<DWM_SYSTEMBACKDROP_TYPE>(2); // DWMSBT_MICA
+		if (SUCCEEDED(DwmSetWindowAttribute(hwnd, 38 /* DWMWA_SYSTEMBACKDROP_TYPE */, &backdrop, sizeof(backdrop))))
 			{
 				const MARGINS sheetMargins{-1, -1, -1, -1};
 				if (SUCCEEDED(DwmExtendFrameIntoClientArea(hwnd, &sheetMargins)))
