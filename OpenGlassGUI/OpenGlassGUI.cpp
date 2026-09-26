@@ -17,31 +17,17 @@ namespace OpenGlass
 {
 	namespace
 	{
-			// Win11 window effects: rounded corners (always works) and the Mica
-		// backdrop (22H2+, best effort). Mica only shows through frame padding and
-		// unpainted regions; child controls keep their own backgrounds.
-		// All calls are non-fatal: on failure the window simply keeps the classic look.
+		// Win11 window effects: rounded corners only.
+		// NOTE: Mica backdrop (DWMWA_SYSTEMBACKDROP_TYPE + DwmExtendFrameIntoClientArea)
+		// was tried and reverted: with wxMSW's transparent child backgrounds the whole
+		// client area becomes see-through and labels are unreadable. Round corners are
+		// safe and always work; all calls are best-effort.
 		void EnableWin11WindowEffects(wxFrame* frame)
 		{
-		const HWND hwnd = frame->GetHWND();
+			const HWND hwnd = frame->GetHWND();
 
-		// 33/ROUND and 38/MICA are Win11 DWM attributes; numeric values with a
-		// cast so this compiles regardless of how the SDK declares the enums.
-		DWM_WINDOW_CORNER_PREFERENCE corner = static_cast<DWM_WINDOW_CORNER_PREFERENCE>(2); // DWMWCP_ROUND
-		DwmSetWindowAttribute(hwnd, 33 /* DWMWA_WINDOW_CORNER_PREFERENCE */, &corner, sizeof(corner));
-
-		DWM_SYSTEMBACKDROP_TYPE backdrop = static_cast<DWM_SYSTEMBACKDROP_TYPE>(2); // DWMSBT_MICA
-		if (SUCCEEDED(DwmSetWindowAttribute(hwnd, 38 /* DWMWA_SYSTEMBACKDROP_TYPE */, &backdrop, sizeof(backdrop))))
-			{
-				const MARGINS sheetMargins{-1, -1, -1, -1};
-				if (SUCCEEDED(DwmExtendFrameIntoClientArea(hwnd, &sheetMargins)))
-				{
-				// Stop wx from painting an opaque background over the backdrop.
-				frame->SetBackgroundStyle(wxBG_STYLE_TRANSPARENT);
-				frame->SetBackgroundColour(wxNullColour);
-				frame->Refresh();
-				}
-			}
+			DWM_WINDOW_CORNER_PREFERENCE corner = static_cast<DWM_WINDOW_CORNER_PREFERENCE>(2); // DWMWCP_ROUND
+			DwmSetWindowAttribute(hwnd, 33 /* DWMWA_WINDOW_CORNER_PREFERENCE */, &corner, sizeof(corner));
 		}
 
 		// Apply the font to a window and, recursively, to all of its children.
