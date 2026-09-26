@@ -18,9 +18,18 @@ namespace OpenGlass
 		// wxWindow::GetFont() bubbles up to the parent, so setting it on the frame
 		// also covers children created later (dialogs with this frame as parent,
 		// controls added at runtime); this pass covers everything built up front.
+		// Also localizes the stock "Browse" label used by wxFilePickerCtrl/wxDirPickerCtrl.
 		void ApplyFontToWindowTree(wxWindow* window, const wxFont& font)
 		{
 			window->SetFont(font);
+			if (auto* button = wxDynamicCast(window, wxButton))
+			{
+				const wxString label = button->GetLabel();
+				if (label == L"Browse" || label == L"Browse..." || label == L"...")
+				{
+					button->SetLabel(L"浏览...");
+				}
+			}
 			for (wxWindow* child : window->GetChildren())
 			{
 				ApplyFontToWindowTree(child, font);

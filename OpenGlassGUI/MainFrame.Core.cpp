@@ -45,10 +45,11 @@ namespace OpenGlass
 	}
 
 	MainFrame::MainFrame(const wxString& title, std::wstring userSid)
-		: wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(900, 750))
+		: wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(1160, 800))
 	{
 		m_isAdmin = true;
 		SetTitle(title + L"（管理员）");
+		SetMinSize(wxSize(1000, 680));
 		m_baseTitle = GetTitle();
 		m_config = std::make_unique<RegistryConfig>(RegistryConfig::Mode::Canonical, userSid);
 		m_userConfig = std::make_unique<RegistryConfig>(RegistryConfig::Mode::User, userSid);
@@ -84,7 +85,7 @@ namespace OpenGlass
 
 		m_notebook->SetSelection(2);
 
-		GetSizer()->Add(m_notebook, 1, wxEXPAND | wxALL, 5);
+		GetSizer()->Add(m_notebook, 1, wxEXPAND | wxALL, 8);
 		auto* statusBar = CreateStatusBar();
 		statusBar->SetToolTip(
 			L"Windows 颜色配置按此用户（SID: " + m_targetUserSid
@@ -104,10 +105,10 @@ namespace OpenGlass
 		m_btnRevert->SetToolTip(L"还原更改 (Esc)");
 
 		btnSizer->AddStretchSpacer();
-		btnSizer->Add(m_btnSave, 0, wxRIGHT, 5);
+		btnSizer->Add(m_btnSave, 0, wxRIGHT, 8);
 		btnSizer->Add(m_btnRevert, 0);
 
-		parentSizer->Add(btnSizer, 0, wxEXPAND | wxALL, 5);
+		parentSizer->Add(btnSizer, 0, wxEXPAND | wxALL, 8);
 	}
 
 	bool MainFrame::NotifySettingsChange(ChangeType type)
@@ -751,7 +752,7 @@ namespace OpenGlass
 		{
 			AddOptionStatus(parent, row, *setting, overrideSetting);
 		}
-		sizer->Add(row, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(row, 0, wxEXPAND | wxALL, 4);
 	}
 
 	void MainFrame::AddOptionStatus(

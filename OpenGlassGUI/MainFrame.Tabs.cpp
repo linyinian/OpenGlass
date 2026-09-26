@@ -119,7 +119,7 @@ namespace OpenGlass
 			m_chkDisableGlassOnBattery = new wxCheckBox(panel, wxID_ANY, L"省电时禁用透明效果");
 			row->Add(m_chkDisableGlassOnBattery, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			AddOptionStatus(panel, row, Settings::Id::DisableGlassOnBattery);
-			globalGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			globalGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		m_chkDisableGlassOnBattery->SetToolTip(L"勾选后，当节能/省电模式开启时，毛玻璃效果将变为不透明。");
 		{
@@ -127,7 +127,7 @@ namespace OpenGlass
 			m_chkGlassSafetyZone = new wxCheckBox(panel, wxID_ANY, L"禁用毛玻璃安全区");
 			row->Add(m_chkGlassSafetyZone, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			AddOptionStatus(panel, row, Settings::Id::GlassSafetyZoneMode);
-			globalGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			globalGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		m_chkGlassSafetyZone->SetToolTip(L"禁用此选项可能导致视觉瑕疵。默认启用（不勾选）。");
 
@@ -145,10 +145,10 @@ namespace OpenGlass
 		hooks.Add(L"毛玻璃反射处理器");// 0x8
 		hooks.Add(L"标题栏尺寸调整器");// 0x10
 		m_clDisabledHooks = new wxCheckListBox(panel, wxID_ANY, wxDefaultPosition, wxDefaultSize, hooks);
-		globalGroup->Add(m_clDisabledHooks, 0, wxEXPAND | wxALL, 2);
+		globalGroup->Add(m_clDisabledHooks, 0, wxEXPAND | wxALL, 4);
 		m_clDisabledHooks->SetToolTip(L"控制禁用哪些模块的钩子。\n非兼容性维护请勿修改。");
 
-		sizer->Add(globalGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(globalGroup, 0, wxEXPAND | wxALL, 4);
 		if (!m_isAdmin)
 		{
 			AddAdminRequiredTip(panel, sizer, L"编辑全局设置需要管理员权限。");
@@ -445,14 +445,14 @@ namespace OpenGlass
 			row->Add(m_fpCustomThemeAtlas, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::CustomThemeAtlas);
 			AddPathWarningIcon(panel, row, m_fpCustomThemeAtlas, m_chkCustomThemeAtlas, L"主题图集");
-			themeGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			themeGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
 		// Export Button
 		m_btnExportAtlas = new wxButton(panel, wxID_ANY, L"导出当前主题图集");
-		themeGroup->Add(m_btnExportAtlas, 0, wxALL, 2);
+		themeGroup->Add(m_btnExportAtlas, 0, wxALL, 4);
 
-		sizer->Add(themeGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(themeGroup, 0, wxEXPAND | wxALL, 4);
 
 		// Reflection Group
 		wxStaticBoxSizer* reflectionGroup = new wxStaticBoxSizer(wxVERTICAL, panel, L"反射");
@@ -468,15 +468,15 @@ namespace OpenGlass
 			row->Add(m_fpCustomThemeReflection, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::CustomThemeReflection);
 			AddPathWarningIcon(panel, row, m_fpCustomThemeReflection, m_chkCustomThemeReflection, L"反射纹理");
-			reflectionGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			reflectionGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
 		// Reflection Intensity
-		m_slReflectionIntensity = new NativeSlider(panel, wxID_ANY, 0, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slReflectionIntensity = new NativeSlider(panel, wxID_ANY, 0, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(panel, reflectionGroup, L"毛玻璃反射强度：", m_slReflectionIntensity, Settings::Id::ColorizationGlassReflectionIntensity);
 
 		// Reflection Parallax
-		m_slReflectionParallax = new NativeSlider(panel, wxID_ANY, 13, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slReflectionParallax = new NativeSlider(panel, wxID_ANY, 13, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(panel, reflectionGroup, L"毛玻璃视差强度：", m_slReflectionParallax, Settings::Id::ColorizationGlassReflectionParallaxIntensity);
 
 		// Reflection Policy
@@ -490,7 +490,7 @@ namespace OpenGlass
 			m_chkReflectionPolicySnap = new wxCheckBox(panel, wxID_ANY, L"Aero Snap");
 			row->Add(m_chkReflectionPolicySnap, 0, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::ColorizationGlassReflectionPolicy);
-			reflectionGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			reflectionGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		// Legacy (kept for reference):
 		// wxArrayString policies;
@@ -522,11 +522,11 @@ namespace OpenGlass
 			ch->SetSelection(0);
 			row->Add(ch, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 
-			sl = new NativeSlider(reflectionOpacityPanel, wxID_ANY, 50, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+			sl = new NativeSlider(reflectionOpacityPanel, wxID_ANY, 50, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 			sl->Disable();
 			row->Add(sl, 1, wxALIGN_CENTER_VERTICAL); // Flex 1 for slider
 
-			reflectionOpacitySizer->Add(row, 0, wxEXPAND | wxALL, 2);
+			reflectionOpacitySizer->Add(row, 0, wxEXPAND | wxALL, 4);
 		};
 
 		addRefOpacity(L"基础不透明度：", m_chModeReflectionOpacity, m_slReflectionOpacity);
@@ -539,7 +539,7 @@ namespace OpenGlass
 		AddOptionStatus(reflectionOpacityPanel, dynamic_cast<wxBoxSizer*>(reflectionOpacitySizer->GetItem(reflectionOpacitySizer->GetItemCount() - 1)->GetSizer()), Settings::Id::ColorizationGlassReflectionOpacityInactiveMaximized);
 		reflectionOpacityPanel->SetSizer(reflectionOpacitySizer);
 
-		sizer->Add(reflectionGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(reflectionGroup, 0, wxEXPAND | wxALL, 4);
 
 		// Material Group
 		wxStaticBoxSizer* materialGroup = new wxStaticBoxSizer(wxVERTICAL, panel, L"材质");
@@ -555,14 +555,14 @@ namespace OpenGlass
 			row->Add(m_fpCustomThemeMaterial, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::CustomThemeMaterial);
 			AddPathWarningIcon(panel, row, m_fpCustomThemeMaterial, m_chkCustomThemeMaterial, L"材质纹理");
-			materialGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			materialGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
 		// Material Opacity
-		m_slMaterialOpacity = new NativeSlider(panel, wxID_ANY, 0, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slMaterialOpacity = new NativeSlider(panel, wxID_ANY, 0, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(panel, materialGroup, L"材质不透明度：", m_slMaterialOpacity, Settings::Id::MaterialOpacity);
 
-		sizer->Add(materialGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(materialGroup, 0, wxEXPAND | wxALL, 4);
 
 		panel->SetSizer(sizer);
 		panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW)); 
@@ -588,7 +588,7 @@ namespace OpenGlass
 			BlurSettings::GuiMaximumBlurAmount,
 			wxDefaultPosition,
 			wxDefaultSize,
-			wxSL_HORIZONTAL | wxSL_AUTOTICKS
+			wxSL_HORIZONTAL
 		);
 		AddProperty(panel, generalGroup, L"模糊数量：", m_slBlurAmount, Settings::Id::BlurDeviation);
 		// Blur Optimization
@@ -605,11 +605,11 @@ namespace OpenGlass
 			m_chkUseD3D = new wxCheckBox(panel, wxID_ANY, L"使用 Direct3D 渲染器");
 			row->Add(m_chkUseD3D, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			AddOptionStatus(panel, row, Settings::Id::UseDirect3DRendering);
-			generalGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			generalGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		m_chkUseD3D->SetToolTip(L"使用 Direct3D 11 后端。它会忽略 BlurDeviation 和 BlurOptimization，改用固定的 3 px 高斯标准差。");
 
-		sizer->Add(generalGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(generalGroup, 0, wxEXPAND | wxALL, 4);
 		// Window Group
 		wxStaticBoxSizer* geometryGroup = new wxStaticBoxSizer(wxVERTICAL, panel, L"窗口");
 
@@ -630,7 +630,7 @@ namespace OpenGlass
 			m_scRoundRectRadius->SetRange(0, 50);
 			row->Add(m_scRoundRectRadius, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::RoundRectRadius);
-			geometryGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			geometryGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
 		// Caption Buttons
@@ -648,10 +648,10 @@ namespace OpenGlass
 			m_chkDisableModernBorders = new wxCheckBox(panel, wxID_ANY, L"禁用现代边框");
 			row->Add(m_chkDisableModernBorders, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			AddOptionStatus(panel, row, Settings::Id::DisableModernBorders);
-			geometryGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			geometryGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
-		sizer->Add(geometryGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(geometryGroup, 0, wxEXPAND | wxALL, 4);
 
 		// Caption Group
 		wxStaticBoxSizer* textGroup = new wxStaticBoxSizer(wxVERTICAL, panel, L"标题栏");
@@ -669,7 +669,7 @@ namespace OpenGlass
 			m_chCenterCaption = new wxChoice(panel, wxID_ANY, wxDefaultPosition, wxDefaultSize, modes);
 			row->Add(m_chCenterCaption, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			AddOptionStatus(panel, row, Settings::Id::CenterCaption);
-			textGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			textGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
 		// Text Glow Mode
@@ -692,7 +692,7 @@ namespace OpenGlass
 			row->Add(m_scTextGlowSize, 0, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(panel, row, Settings::Id::TextGlowMode);
 
-			textGroup->Add(row, 0, wxEXPAND | wxALL, 2);
+			textGroup->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		
 		// Text color overrides
@@ -720,7 +720,7 @@ namespace OpenGlass
 			cp = new wxColourPickerCtrl(textColorOverridesPanel, wxID_ANY);
 			cp->Enable(false); // Default disabled
 			r->Add(cp, 1, wxALIGN_CENTER_VERTICAL);
-			textColorOverridesSizer->Add(r, 0, wxEXPAND | wxALL, 2);
+			textColorOverridesSizer->Add(r, 0, wxEXPAND | wxALL, 4);
 		};
 
 		addColorOverride(m_chModeColorCaption, m_cpColorCaption, L"活动：");
@@ -733,7 +733,7 @@ namespace OpenGlass
 		AddOptionStatus(textColorOverridesPanel, dynamic_cast<wxBoxSizer*>(textColorOverridesSizer->GetItem(textColorOverridesSizer->GetItemCount() - 1)->GetSizer()), Settings::Id::ColorizationColorCaptionInactiveMaximized);
 		textColorOverridesPanel->SetSizer(textColorOverridesSizer);
 
-		sizer->Add(textGroup, 0, wxEXPAND | wxALL, 2);
+		sizer->Add(textGroup, 0, wxEXPAND | wxALL, 4);
 
 		wxStaticBoxSizer* accentGroup = new wxStaticBoxSizer(wxVERTICAL, panel, L"强调色");
 		wxBoxSizer* accentRow = new wxBoxSizer(wxHORIZONTAL);
@@ -741,8 +741,8 @@ namespace OpenGlass
 		m_chkGlassOverrideAccent->SetToolTip(L"用 OpenGlass 效果覆盖强调色模糊表面。");
 		accentRow->Add(m_chkGlassOverrideAccent, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 		AddOptionStatus(panel, accentRow, Settings::Id::GlassOverrideAccent);
-		accentGroup->Add(accentRow, 0, wxEXPAND | wxALL, 2);
-		sizer->Add(accentGroup, 0, wxEXPAND | wxALL, 2);
+		accentGroup->Add(accentRow, 0, wxEXPAND | wxALL, 4);
+		sizer->Add(accentGroup, 0, wxEXPAND | wxALL, 4);
 
 		panel->SetSizer(sizer);
 		m_notebook->AddPage(panel, L"外观");
@@ -825,9 +825,9 @@ namespace OpenGlass
 		};
 		addCustomColorButton(m_vistaPresetSizer);
 		addCustomColorButton(m_windows7PresetSizer);
-		m_colorPresetsGroupSizer->Add(m_vistaPresetSizer, 0, wxEXPAND | wxALL, 2);
-		m_colorPresetsGroupSizer->Add(m_windows7PresetSizer, 0, wxEXPAND | wxALL, 2);
-		sizer->Add(m_colorPresetsGroupSizer, 0, wxEXPAND | wxALL, 2);
+		m_colorPresetsGroupSizer->Add(m_vistaPresetSizer, 0, wxEXPAND | wxALL, 4);
+		m_colorPresetsGroupSizer->Add(m_windows7PresetSizer, 0, wxEXPAND | wxALL, 4);
+		sizer->Add(m_colorPresetsGroupSizer, 0, wxEXPAND | wxALL, 4);
 
 		// Keep the frequently used controls visible, matching the original
 		// Vista/Windows 7 control-panel flow.
@@ -854,7 +854,7 @@ namespace OpenGlass
 				ColorizationPresets::ClassicIntensityMaximum,
 				wxDefaultPosition,
 				wxDefaultSize,
-				wxSL_HORIZONTAL | wxSL_AUTOTICKS
+				wxSL_HORIZONTAL
 			);
 			row->Add(m_slColorIntensity, 1, wxALIGN_CENTER_VERTICAL);
 			sizer->Add(row, 0, wxEXPAND | wxALL, 8);
@@ -920,7 +920,7 @@ namespace OpenGlass
 		}
 		colorRow->Add(m_afterglowColumnSizer, 1, wxEXPAND | wxLEFT, 10);
 		
-		colorsGroup->Add(colorRow, 0, wxEXPAND | wxALL, 2);
+		colorsGroup->Add(colorRow, 0, wxEXPAND | wxALL, 4);
 
 		// Vista-only inactive opacity. Active opacity is the always-visible
 		// color-intensity slider above.
@@ -940,7 +940,7 @@ namespace OpenGlass
 			// Spacer to align with the "Auto" dropdown column below
 			row->Add(new wxPanel(detailsPanel, wxID_ANY, wxDefaultPosition, wxSize(70, 1)), 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 
-			m_slGlassOpacityInactive = new NativeSlider(detailsPanel, wxID_ANY, 63, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+			m_slGlassOpacityInactive = new NativeSlider(detailsPanel, wxID_ANY, 63, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 			m_slGlassOpacityInactive->Enable(false);
 			row->Add(m_slGlassOpacityInactive, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(detailsPanel, row, Settings::Id::GlassOpacityInactive);
@@ -948,20 +948,20 @@ namespace OpenGlass
 			m_vistaOpacitySizer->Add(row, 0, wxEXPAND | wxTOP, 2);
 		}
 		
-		colorsGroup->Add(m_vistaOpacitySizer, 0, wxEXPAND | wxALL, 2);
-		m_detailedColorizationSizer->Add(colorsGroup, 0, wxEXPAND | wxALL, 2);
+		colorsGroup->Add(m_vistaOpacitySizer, 0, wxEXPAND | wxALL, 4);
+		m_detailedColorizationSizer->Add(colorsGroup, 0, wxEXPAND | wxALL, 4);
 
 		// Win7 Style Parameters
 		wxStaticBoxSizer* win7Group = new wxStaticBoxSizer(wxVERTICAL, detailsPanel, L"合成参数");
 		m_win7GroupSizer = win7Group; // Assign to member
 		
-		m_slBlurBalance = new NativeSlider(detailsPanel, wxID_ANY, 50, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slBlurBalance = new NativeSlider(detailsPanel, wxID_ANY, 50, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(detailsPanel, win7Group, L"模糊平衡：", m_slBlurBalance, Settings::Id::ColorizationBlurBalance, Settings::Id::ColorizationBlurBalanceOverride);
 		
-		m_slAfterglowBalance = new NativeSlider(detailsPanel, wxID_ANY, 10, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slAfterglowBalance = new NativeSlider(detailsPanel, wxID_ANY, 10, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(detailsPanel, win7Group, L"余辉平衡：", m_slAfterglowBalance, Settings::Id::ColorizationAfterglowBalance, Settings::Id::ColorizationAfterglowBalanceOverride);
 
-		m_slColorBalance = new NativeSlider(detailsPanel, wxID_ANY, 10, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+		m_slColorBalance = new NativeSlider(detailsPanel, wxID_ANY, 10, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 		AddProperty(detailsPanel, win7Group, L"颜色平衡：", m_slColorBalance, Settings::Id::ColorizationColorBalance, Settings::Id::ColorizationColorBalanceOverride);
 
 		{
@@ -970,10 +970,10 @@ namespace OpenGlass
 			m_btnPersistCompositionParameters = new wxButton(detailsPanel, wxID_ANY, L"保持当前值");
 			m_btnPersistCompositionParameters->SetToolTip(L"将显示的三个合成参数复制为持久的按用户 Override 值。");
 			row->Add(m_btnPersistCompositionParameters, 0);
-			win7Group->Add(row, 0, wxEXPAND | wxALL, 2);
+			win7Group->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 
-		m_detailedColorizationSizer->Add(win7Group, 0, wxEXPAND | wxALL, 2);
+		m_detailedColorizationSizer->Add(win7Group, 0, wxEXPAND | wxALL, 4);
 		detailsPanel->SetSizer(m_detailedColorizationSizer);
 
 		// Advanced colorization
@@ -1006,7 +1006,7 @@ namespace OpenGlass
 			sc->Enable(false);
 			row->Add(sc, 0, wxALIGN_CENTER_VERTICAL | wxLEFT, 2);
 
-			advancedSizer->Add(row, 0, wxEXPAND | wxALL, 2);
+			advancedSizer->Add(row, 0, wxEXPAND | wxALL, 4);
 		};
 
 		addBlurBase(m_chModeBaseTransparent, m_cpBaseTransparent, m_scBaseTransparentAlpha, L"基础颜色（透明）：");
@@ -1029,7 +1029,7 @@ namespace OpenGlass
 			row->Add(m_chOpaqueBlendPriority, 1, wxALIGN_CENTER_VERTICAL);
 			AddOptionStatus(advancedPanel, row, Settings::Id::ColorizationOpaqueBlendPriority);
 			
-			advancedSizer->Add(row, 0, wxEXPAND | wxALL, 2);
+			advancedSizer->Add(row, 0, wxEXPAND | wxALL, 4);
 		}
 		
 		auto addOpacityOverride = [&](wxChoice*& ch, wxSlider*& sl, const wxString& label) {
@@ -1044,11 +1044,11 @@ namespace OpenGlass
 			ch = new wxChoice(advancedPanel, wxID_ANY, wxDefaultPosition, wxSize(120, -1), modes); // Aligned width
 			r->Add(ch, 0, wxALIGN_CENTER_VERTICAL | wxRIGHT, 5);
 			
-			sl = new NativeSlider(advancedPanel, wxID_ANY, 100, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL | wxSL_AUTOTICKS);
+			sl = new NativeSlider(advancedPanel, wxID_ANY, 100, 0, 100, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL);
 			sl->Enable(false);
 			r->Add(sl, 1, wxALIGN_CENTER_VERTICAL);
 			
-			advancedSizer->Add(r, 0, wxEXPAND | wxALL, 2);
+			advancedSizer->Add(r, 0, wxEXPAND | wxALL, 4);
 		};
 
 		addOpacityOverride(m_chModeColorizationOpacity, m_slColorizationOpacity, L"基础不透明度：");
