@@ -49,7 +49,11 @@ namespace OpenGlass
 	{
 		m_isAdmin = true;
 		SetTitle(title + L"（管理员）");
-		SetMinSize(wxSize(1000, 680));
+		// Fit the designed 1160x800 size to small logical desktops
+		// (e.g. a 2880x1800 panel at 200% scaling has only 1440x900).
+		const wxSize screen = wxGetDisplaySize();
+		SetSize(std::min(1160, screen.x - 60), std::min(800, screen.y - 160));
+		SetMinSize(wxSize(1000, 660));
 		m_baseTitle = GetTitle();
 		m_config = std::make_unique<RegistryConfig>(RegistryConfig::Mode::Canonical, userSid);
 		m_userConfig = std::make_unique<RegistryConfig>(RegistryConfig::Mode::User, userSid);
